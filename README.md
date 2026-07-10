@@ -25,12 +25,12 @@ font-weight:bold;
 .hero{
 background:#0d1b2a;
 color:white;
-padding:60px 20px;
+padding:70px 20px;
 text-align:center;
 }
 
 .hero h1{
-font-size:40px;
+font-size:42px;
 }
 
 .hero p{
@@ -41,24 +41,30 @@ font-size:22px;
 display:inline-block;
 background:#25d366;
 color:white;
-padding:15px 30px;
-border-radius:10px;
+padding:15px 35px;
+border-radius:30px;
 text-decoration:none;
 font-size:20px;
+margin-top:20px;
 }
 
-.services{
-padding:40px;
+section{
+padding:40px 20px;
 text-align:center;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
 }
 
 .card{
 background:white;
-margin:15px;
-padding:20px;
-border-radius:10px;
-display:inline-block;
+padding:25px;
 width:250px;
+border-radius:15px;
 box-shadow:0 0 10px #ccc;
 }
 
@@ -75,49 +81,62 @@ text-align:center;
 <body>
 
 <header>
-☀️ شركة المهندس للطاقة الشمسية
+☀️ المهندس للطاقة الشمسية
 </header>
 
 
-<section class="hero">
+<div class="hero">
 
-<h1>حلول الطاقة الشمسية في مصر</h1>
+<h1>
+حلول الطاقة الشمسية في مصر
+</h1>
 
 <p>
-بيع - تركيب - صيانة أنظمة الطاقة الشمسية
+بيع - تركيب - صيانة محطات الطاقة الشمسية
 </p>
 
-<a class="btn" href="https://wa.me/201029394526">
+<a class="btn" 
+href="https://wa.me/201029394526">
 تواصل واتساب
 </a>
 
-</section>
+</div>
 
 
-<section class="services">
+<section>
 
-<h2>خدماتنا</h2>
+<h2>
+خدماتنا
+</h2>
+
+<div class="cards">
 
 <div class="card">
 <h3>تركيب المحطات</h3>
-<p>تنفيذ محطات طاقة شمسية بأعلى جودة</p>
+<p>تنفيذ وتركيب أنظمة الطاقة الشمسية.</p>
 </div>
 
 <div class="card">
 <h3>الصيانة</h3>
-<p>صيانة جميع أنظمة الطاقة الشمسية</p>
+<p>صيانة ومتابعة جميع الأنظمة.</p>
 </div>
 
 <div class="card">
 <h3>المضخات الشمسية</h3>
-<p>حلول الري بالطاقة الشمسية</p>
+<p>حلول الري بالطاقة الشمسية.</p>
+</div>
+
 </div>
 
 </section>
 
 
 <footer>
-شركة المهندس للطاقة الشمسية - مصر
+
+شركة المهندس للطاقة الشمسية  
+<br>
+بيع وشراء وتركيب وصيانة أنظمة الطاقة الشمسية
+
 </footer>
 
 </body>

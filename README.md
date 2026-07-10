@@ -25,12 +25,12 @@ font-weight:bold;
 .hero{
 background:#0d1b2a;
 color:white;
-padding:70px 20px;
+padding:60px 20px;
 text-align:center;
 }
 
 .hero h1{
-font-size:42px;
+font-size:40px;
 }
 
 .hero p{
@@ -41,15 +41,14 @@ font-size:22px;
 display:inline-block;
 background:#25d366;
 color:white;
-padding:15px 35px;
-border-radius:30px;
+padding:15px 30px;
+border-radius:10px;
 text-decoration:none;
 font-size:20px;
-margin-top:20px;
 }
 
 section{
-padding:40px 20px;
+padding:30px;
 text-align:center;
 }
 
@@ -62,9 +61,9 @@ gap:20px;
 
 .card{
 background:white;
-padding:25px;
-width:250px;
+padding:20px;
 border-radius:15px;
+width:250px;
 box-shadow:0 0 10px #ccc;
 }
 
@@ -92,11 +91,10 @@ text-align:center;
 </h1>
 
 <p>
-بيع - تركيب - صيانة محطات الطاقة الشمسية
+بيع - تركيب - صيانة محطات الطاقة الشمسية والطلمبات
 </p>
 
-<a class="btn" 
-href="https://wa.me/201029394526">
+<a class="btn" href="https://wa.me/201029394526">
 تواصل واتساب
 </a>
 
@@ -105,25 +103,25 @@ href="https://wa.me/201029394526">
 
 <section>
 
-<h2>
-خدماتنا
-</h2>
+<h2>خدماتنا</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>تركيب المحطات</h3>
-<p>تنفيذ وتركيب أنظمة الطاقة الشمسية.</p>
+<p>تصميم وتركيب أنظمة الطاقة الشمسية.</p>
 </div>
+
+
+<div class="card">
+<h3>الطلمبات الشمسية</h3>
+<p>توريد وتركيب طلمبات غاطسة تعمل بالطاقة الشمسية.</p>
+</div>
+
 
 <div class="card">
 <h3>الصيانة</h3>
 <p>صيانة ومتابعة جميع الأنظمة.</p>
-</div>
-
-<div class="card">
-<h3>المضخات الشمسية</h3>
-<p>حلول الري بالطاقة الشمسية.</p>
 </div>
 
 </div>
@@ -132,12 +130,11 @@ href="https://wa.me/201029394526">
 
 
 <footer>
-
-شركة المهندس للطاقة الشمسية  
+شركة المهندس للطاقة الشمسية
 <br>
-بيع وشراء وتركيب وصيانة أنظمة الطاقة الشمسية
-
+واتساب: 01029394526
 </footer>
+
 
 </body>
 </html>

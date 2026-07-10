@@ -1,140 +1,86 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<section id="about">
 
-<title>شركة المهندس للطاقة الشمسية</title>
+<h2>من نحن</h2>
 
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:#f5f5f5;
-color:#222;
-}
-
-header{
-background:#ffb703;
-padding:25px;
-text-align:center;
-font-size:30px;
-font-weight:bold;
-}
-
-.hero{
-background:#0d1b2a;
-color:white;
-padding:60px 20px;
-text-align:center;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-.hero p{
-font-size:22px;
-}
-
-.btn{
-display:inline-block;
-background:#25d366;
-color:white;
-padding:15px 30px;
-border-radius:10px;
-text-decoration:none;
-font-size:20px;
-}
-
-section{
-padding:30px;
-text-align:center;
-}
-
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-
-.card{
-background:white;
-padding:20px;
-border-radius:15px;
-width:250px;
-box-shadow:0 0 10px #ccc;
-}
-
-footer{
-background:#0d1b2a;
-color:white;
-padding:20px;
-text-align:center;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-☀️ المهندس للطاقة الشمسية
-</header>
-
-
-<div class="hero">
-
-<h1>
-حلول الطاقة الشمسية في مصر
-</h1>
+<div class="card">
 
 <p>
-بيع - تركيب - صيانة محطات الطاقة الشمسية والطلمبات
+شركة المهندس للطاقة الشمسية متخصصة في بيع وشراء وتركيب وصيانة جميع أنظمة الطاقة الشمسية داخل مصر، ونوفر أفضل الحلول للمنازل والمزارع والمصانع باستخدام أحدث المعدات وأفضل الخامات.
 </p>
-
-<a class="btn" href="https://wa.me/201029394526">
-تواصل واتساب
-</a>
 
 </div>
 
+</section>
 
-<section>
+<section id="projects">
 
-<h2>خدماتنا</h2>
+<h2>معرض أعمالنا</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>تركيب المحطات</h3>
-<p>تصميم وتركيب أنظمة الطاقة الشمسية.</p>
+<img src="images/project1.jpg" alt="مشروع 1">
+<p>محطة طاقة شمسية لمزرعة.</p>
 </div>
 
-
 <div class="card">
-<h3>الطلمبات الشمسية</h3>
-<p>توريد وتركيب طلمبات غاطسة تعمل بالطاقة الشمسية.</p>
+<img src="images/project2.jpg" alt="مشروع 2">
+<p>طلمبة غاطسة تعمل بالطاقة الشمسية.</p>
 </div>
 
-
 <div class="card">
-<h3>الصيانة</h3>
-<p>صيانة ومتابعة جميع الأنظمة.</p>
+<img src="images/project3.jpg" alt="مشروع 3">
+<p>تركيب ألواح شمسية فوق أحد المباني.</p>
 </div>
 
 </div>
 
 </section>
 
+<section id="brands">
 
-<footer>
-شركة المهندس للطاقة الشمسية
-<br>
-واتساب: 01029394526
-</footer>
+<h2>العلامات التجارية</h2>
 
+<div class="cards">
 
-</body>
-</html>
+<div class="card">Jinko Solar</div>
+
+<div class="card">Trina Solar</div>
+
+<div class="card">LONGi Solar</div>
+
+<div class="card">Canadian Solar</div>
+
+<div class="card">FRECON</div>
+
+<div class="card">Growatt</div>
+
+</div>
+
+</section>
+
+<section id="why">
+
+<h2>لماذا نحن؟</h2>
+
+<div class="cards">
+
+<div class="card">
+✅ خبرة كبيرة في مجال الطاقة الشمسية.
+</div>
+
+<div class="card">
+✅ أسعار تنافسية.
+</div>
+
+<div class="card">
+✅ ضمان على جميع الأعمال.
+</div>
+
+<div class="card">
+✅ خدمة ما بعد البيع والصيانة.
+</div>
+
+</div>
+
+</section>

@@ -67,3 +67,69 @@ text-align:center;
 padding:15px;
 margin-top:20px;
 }
+// زر الواتساب
+
+const whatsappButtons = document.querySelectorAll(".whatsapp");
+
+whatsappButtons.forEach(button => {
+
+    button.addEventListener("click", function(){
+
+        console.log("Opening WhatsApp");
+
+    });
+
+});
+
+
+// تأثير ظهور الأقسام عند النزول
+
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", function(){
+
+    sections.forEach(section => {
+
+        let position = section.getBoundingClientRect().top;
+
+        let screenHeight = window.innerHeight;
+
+        if(position < screenHeight - 100){
+
+            section.style.opacity = "1";
+            section.style.transform = "translateY(0)";
+
+        }
+
+    });
+
+}); 
+// إعداد حركة ظهور الأقسام
+
+sections.forEach(section => {
+
+    section.style.opacity = "0";
+    section.style.transform = "translateY(40px)";
+    section.style.transition = "0.7s ease";
+
+});
+
+
+// رسالة ترحيب في وحدة التحكم
+
+console.log(
+"Welcome to AL-MUHANDIS SOLAR ENERGY - Powering the Future with Solar Energy"
+);
+
+
+// تحديث السنة تلقائياً في الفوتر
+
+const year = new Date().getFullYear();
+
+const footerYear = document.querySelector(".year");
+
+if(footerYear){
+
+    footerYear.innerHTML = year;
+
+}

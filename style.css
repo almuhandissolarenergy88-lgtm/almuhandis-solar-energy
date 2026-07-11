@@ -73,7 +73,7 @@ section h2::after{
 
 .card h3{
     margin-bottom:15px;
-}
+} 
 /* الهيدر والقائمة */
 
 header{
@@ -157,7 +157,7 @@ header{
 
 .btn:hover{
     transform:scale(1.05);
-}
+} 
 /* المنتجات */
 
 .products{
@@ -238,7 +238,7 @@ header{
     border-radius:15px;
     display:block;
     margin:auto;
-}
+    } 
 /* أزرار التواصل العائمة */
 
 .floating-buttons{
@@ -335,7 +335,7 @@ section{
     padding:40px 5%;
 }
 
-} 
+    } 
 /* تأثيرات عامة */
 
 button{
@@ -348,3 +348,46 @@ button{
 img{
     max-width:100%;
 }
+
+
+/* تحسين شكل الأقسام */
+
+.used-stations,
+.services,
+.products,
+.gallery,
+.brands,
+.why-us{
+    background:#ffffff;
+}
+
+
+/* تنسيق القوائم */
+
+ul{
+    padding-right:20px;
+}
+
+
+/* تحسين العرض على الشاشات الصغيرة */
+
+@media(max-width:480px){
+
+.hero h1{
+    font-size:26px;
+}
+
+section h2{
+    font-size:26px;
+}
+
+.card{
+    padding:18px;
+}
+
+.floating-buttons a{
+    padding:10px 15px;
+    font-size:14px;
+}
+
+} 

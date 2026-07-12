@@ -1,22 +1,36 @@
-/* تصميم احترافي للموقع */
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; color: #333; margin: 0; padding: 0; direction: rtl; }
+/* هذا الكود يجعل الخلفية تغطي الصفحة بالكامل وتتحرك ببطء */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: center;
+    /* خلفية متدرجة الألوان */
+    background: linear-gradient(45deg, #2d6a4f, #1b4332, #ffb703);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite; /* الحركة */
+    min-height: 100vh;
+    color: white;
+}
 
-header { background: linear-gradient(135deg, #2d6a4f, #1b4332); color: white; padding: 60px 20px; text-align: center; }
+/* هذا هو كود الحركة */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-h1 { margin: 0; font-size: 2.5rem; }
+/* تنسيق الصور لتكون جذابة */
+.main-img {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    border: 5px solid white;
+    transition: transform 0.5s; /* حركة عند وضع الماوس */
+}
 
-.container { max-width: 900px; margin: 20px auto; padding: 20px; }
+.main-img:hover {
+    transform: scale(1.05); /* تكبير الصورة قليلاً عند اللمس */
+}
 
-section { background: white; padding: 30px; margin-bottom: 20px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-
-h2 { color: #2d6a4f; border-right: 5px solid #ffb703; padding-right: 15px; }
-
-.btn { display: inline-block; padding: 12px 25px; margin: 10px; background: #ffb703; color: #333; text-decoration: none; border-radius: 30px; font-weight: bold; transition: 0.3s; }
-
-.btn:hover { background: #e0a300; transform: scale(1.05); }
-
-.whatsapp { background: #25d366; color: white; }
-
-ul { list-style-type: none; padding: 0; }
-
-ul li { background: #f4f4f4; margin: 5px 0; padding: 10px; border-radius: 5px; border-left: 3px solid #2d6a4f; }
+.container { background: rgba(255, 255, 255, 0.9); color: #333; padding: 20px; margin: 20px auto; border-radius: 15px; }

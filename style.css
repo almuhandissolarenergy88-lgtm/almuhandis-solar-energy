@@ -1,13 +1,9 @@
-/* هذا الكود يجعل الصور تأخذ شكل شبكة منظمة */
-.gallery { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 15px; 
-    padding: 20px; 
-}
-.gallery img { 
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover; 
-    border-radius: 10px; 
-}
+/* تنسيق العام والقائمة */
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; direction: rtl; text-align: center; }
+.main-menu { background: #2d6a4f; padding: 15px; display: flex; justify-content: center; flex-wrap: wrap; }
+.main-menu a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+.container { padding: 20px; background: white; max-width: 900px; margin: 20px auto; border-radius: 10px; }
+
+/* تنسيق معرض الصور */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; padding: 20px; }
+.gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }

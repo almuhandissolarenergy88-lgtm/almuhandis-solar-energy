@@ -1,0 +1,48 @@
+/* تنسيق الألوان */
+:root {
+    --primary-green: #2d6a4f;
+    --accent-yellow: #ffb703;
+    --white: #ffffff;
+    --gray: #4a5568;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--gray);
+    direction: rtl;
+    text-align: right;
+}
+
+header {
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+header a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--accent-yellow);
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+h2 {
+    color: var(--primary-green);
+}
+
+ul {
+    list-style-type: square;
+}

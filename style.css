@@ -1,36 +1,11 @@
-/* هذا الكود يجعل الخلفية تغطي الصفحة بالكامل وتتحرك ببطء */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    direction: rtl;
-    text-align: center;
-    /* خلفية متدرجة الألوان */
-    background: linear-gradient(45deg, #2d6a4f, #1b4332, #ffb703);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite; /* الحركة */
-    min-height: 100vh;
-    color: white;
-}
+/* التصميم العام */
+body { font-family: 'Arial', sans-serif; margin: 0; background-color: #f9f9f9; direction: rtl; text-align: center; }
 
-/* هذا هو كود الحركة */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+/* القائمة الرئيسية (ستظهر في كل الصفحات) */
+.main-menu { background: #2d6a4f; padding: 15px; display: flex; justify-content: center; flex-wrap: wrap; }
+.main-menu a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; font-size: 14px; }
+.main-menu a:hover { color: #ffb703; }
 
-/* تنسيق الصور لتكون جذابة */
-.main-img {
-    width: 90%;
-    max-width: 600px;
-    border-radius: 20px;
-    border: 5px solid white;
-    transition: transform 0.5s; /* حركة عند وضع الماوس */
-}
-
-.main-img:hover {
-    transform: scale(1.05); /* تكبير الصورة قليلاً عند اللمس */
-}
-
-.container { background: rgba(255, 255, 255, 0.9); color: #333; padding: 20px; margin: 20px auto; border-radius: 15px; }
+/* المحتوى */
+.container { padding: 20px; max-width: 900px; margin: auto; background: white; border-radius: 10px; margin-top: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+footer { padding: 20px; color: #666; font-size: 12px; }

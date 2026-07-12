@@ -1,22 +1,16 @@
-/* تنسيق القائمة */
-.main-menu { 
-    background: #2d6a4f; 
-    padding: 15px; 
-    display: flex; 
-    justify-content: center; 
-    flex-wrap: wrap; 
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    direction: rtl; 
+    background: #f0f4f8; /* لون خلفية هادئ */
 }
-.main-menu a { 
-    color: white; 
-    margin: 0 10px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    font-size: 16px; 
-}
-.main-menu a:hover { 
-    color: #ffb703; 
-}
+/* تنسيق الشعار */
+.logo { width: 150px; margin: 20px auto; display: block; }
 
-/* تنسيق المحتوى */
-body { font-family: sans-serif; margin: 0; direction: rtl; text-align: center; }
-.container { padding: 20px; }
+/* تنسيق الشريط المتحرك (Marquee) */
+.marquee { background: #ffb703; color: black; padding: 10px; font-weight: bold; overflow: hidden; }
+
+/* معرض الصور */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; padding: 20px; }
+.gallery img { width: 100%; border-radius: 10px; transition: 0.3s; }
+.gallery img:hover { transform: scale(1.05); }

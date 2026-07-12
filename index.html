@@ -1,11 +1,38 @@
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px;">
-    <!-- مثال لخدمة -->
-    <div style="background: white; padding: 10px; border-radius: 10px; border: 1px solid #ddd;">
-        <i class="fas fa-solar-panel" style="font-size: 24px; color: #2d6a4f;"></i>
-        <p>ألواح شمسية</p>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #eef2f3; margin: 0; padding: 10px; }
+        .header { background: #003366; color: white; padding: 20px; border-radius: 15px; text-align: center; }
+        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+        .service-item { background: white; padding: 15px; border-radius: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .footer-btn { display: block; background: #25d366; color: white; text-align: center; padding: 15px; border-radius: 50px; margin-top: 20px; font-weight: bold; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>AL-MUHANDIS SOLAR ENERGY</h1>
+        <p>حلول متكاملة للطاقة الشمسية</p>
     </div>
-    <div style="background: white; padding: 10px; border-radius: 10px; border: 1px solid #ddd;">
-        <i class="fas fa-water" style="font-size: 24px; color: #2d6a4f;"></i>
-        <p>طلمبات مياه</p>
+
+    <div class="services-grid">
+        <div class="service-item"><i class="fas fa-solar-panel"></i><br>ألواح شمسية</div>
+        <div class="service-item"><i class="fas fa-bolt"></i><br>إنفرترات</div>
+        <div class="service-item"><i class="fas fa-water"></i><br>طلمبات مياه</div>
+        <div class="service-item"><i class="fas fa-tools"></i><br>فريق تركيب محترف</div>
     </div>
-</div>
+
+    <div style="background: white; padding: 15px; margin-top: 20px; border-radius: 10px;">
+        <h3>📍 المقر الرئيسي:</h3>
+        <p>محافظة الجيزة - شارع الثلاثيني</p>
+    </div>
+
+    <a href="https://wa.me/201029394526" class="footer-btn">
+        <i class="fab fa-whatsapp"></i> تواصل معنا الآن
+    </a>
+
+</body>
+</html>

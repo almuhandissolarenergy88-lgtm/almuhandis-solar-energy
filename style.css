@@ -1,48 +1,13 @@
-/* تنسيق الألوان */
-:root {
-    --primary-green: #2d6a4f;
-    --accent-yellow: #ffb703;
-    --white: #ffffff;
-    --gray: #4a5568;
-}
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; direction: rtl; text-align: right; background-color: #f4f4f4; }
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: var(--gray);
-    direction: rtl;
-    text-align: right;
-}
+header { background-color: #2d6a4f; color: white; padding: 40px 20px; text-align: center; }
 
-header {
-    background: var(--primary-green);
-    color: var(--white);
-    padding: 50px 20px;
-    text-align: center;
-}
+.container { background: white; padding: 20px; margin: 20px auto; max-width: 800px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
 
-header a {
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--accent-yellow);
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 5px;
-    font-weight: bold;
-}
+h1 { margin-bottom: 10px; }
 
-section {
-    padding: 40px 20px;
-    border-bottom: 1px solid #eee;
-}
+.btn { display: inline-block; padding: 10px 20px; margin: 10px; background: #ffb703; color: black; text-decoration: none; border-radius: 5px; font-weight: bold; }
 
-h2 {
-    color: var(--primary-green);
-}
+.whatsapp { background: #25d366; color: white; }
 
-ul {
-    list-style-type: square;
-}
+h2 { color: #2d6a4f; border-bottom: 2px solid #2d6a4f; padding-bottom: 10px; }

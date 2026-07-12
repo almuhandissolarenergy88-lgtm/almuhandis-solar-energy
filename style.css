@@ -1,11 +1,22 @@
-/* التصميم العام */
-body { font-family: 'Arial', sans-serif; margin: 0; background-color: #f9f9f9; direction: rtl; text-align: center; }
+/* تنسيق القائمة */
+.main-menu { 
+    background: #2d6a4f; 
+    padding: 15px; 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+.main-menu a { 
+    color: white; 
+    margin: 0 10px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 16px; 
+}
+.main-menu a:hover { 
+    color: #ffb703; 
+}
 
-/* القائمة الرئيسية (ستظهر في كل الصفحات) */
-.main-menu { background: #2d6a4f; padding: 15px; display: flex; justify-content: center; flex-wrap: wrap; }
-.main-menu a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; font-size: 14px; }
-.main-menu a:hover { color: #ffb703; }
-
-/* المحتوى */
-.container { padding: 20px; max-width: 900px; margin: auto; background: white; border-radius: 10px; margin-top: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-footer { padding: 20px; color: #666; font-size: 12px; }
+/* تنسيق المحتوى */
+body { font-family: sans-serif; margin: 0; direction: rtl; text-align: center; }
+.container { padding: 20px; }

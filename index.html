@@ -1,31 +1,56 @@
-<div class="section">
-    <h2>جدول قدرات الألواح الشمسية المتوفرة</h2>
-    <div style="overflow-x: auto;">
-        <table style="width: 100%; border-collapse: collapse; text-align: center; border: 1px solid #ddd;">
-            <tr style="background: #003366; color: white;">
-                <th style="padding: 12px;">الماركة</th>
-                <th style="padding: 12px;">القدرات المتاحة (وات)</th>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #ddd; padding: 10px;">Jinko Solar</td>
-                <td style="border: 1px solid #ddd; padding: 10px;">475 - 725 W</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #ddd; padding: 10px;">Trina Solar</td>
-                <td style="border: 1px solid #ddd; padding: 10px;">455 - 725 W</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #ddd; padding: 10px;">Longi Solar</td>
-                <td style="border: 1px solid #ddd; padding: 10px;">415 - 650 W</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #ddd; padding: 10px;">JA Solar</td>
-                <td style="border: 1px solid #ddd; padding: 10px;">405 - 625 W</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #ddd; padding: 10px;">Risen Energy</td>
-                <td style="border: 1px solid #ddd; padding: 10px;">390 - 715 W</td>
-            </tr>
-        </table>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>AL-MUHANDIS SOLAR ENERGY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background-image: url('images/project99.webp'); background-size: cover; background-attachment: fixed; }
+        .overlay { background: rgba(255,255,255,0.9); min-height: 100vh; padding: 20px; }
+        .header { background: #003366; color: white; padding: 20px; text-align: center; border-radius: 10px; }
+        .section { background: white; padding: 15px; margin-top: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .whatsapp-btn { position: fixed; bottom: 20px; left: 20px; background: #25d366; color: white; padding: 15px 20px; border-radius: 50px; font-size: 24px; z-index: 9999; }
+    </style>
+</head>
+<body>
+<div class="overlay">
+
+    <!-- 1. شريط الأخبار المتحرك -->
+    <div style="background: #003366; color: white; padding: 10px; border-radius: 5px;">
+        <marquee>ألواح Jinko • إنفرترات Huawei • طلمبات مياه • أسعار تنافسية • شحن لكل المحافظات</marquee>
     </div>
+
+    <!-- التاريخ والوقت -->
+    <div style="text-align: center; margin: 10px; font-weight: bold;" id="datetime"></div>
+
+    <div class="header">
+        <h1>AL-MUHANDIS SOLAR ENERGY</h1>
+        <p>حلول متكاملة للطاقة الشمسية</p>
+    </div>
+
+    <!-- 2. نموذج طلب عرض السعر -->
+    <div class="section">
+        <h3>اطلب عرض سعر</h3>
+        <form action="https://formspree.io/f/mvoeojon" method="POST">
+            <input type="text" name="name" placeholder="الاسم" style="width:100%; padding:8px; margin-bottom:5px;">
+            <input type="tel" name="phone" placeholder="رقم الواتساب" style="width:100%; padding:8px; margin-bottom:5px;">
+            <button type="submit" style="width:100%; padding:10px; background:#25d366; color:white; border:none;">إرسال الطلب</button>
+        </form>
+    </div>
+
+    <!-- 3. اللوجوهات -->
+    <div class="section" style="display: flex; justify-content: center; gap: 10px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jinko_Solar_logo.svg/100px-Jinko_Solar_logo.svg.png" width="50">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Huawei_logo.svg/100px-Huawei_logo.svg.png" width="50">
+    </div>
+
+    <!-- زر الواتساب -->
+    <a href="https://wa.me/201029394526" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+
 </div>
+
+<script>
+    document.getElementById('datetime').innerHTML = new Date().toLocaleString('ar-EG');
+</script>
+</body>
+</html>

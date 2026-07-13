@@ -1,0 +1,685 @@
+Enter<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>مكتبة التحميل | المهندس للطاقة الشمسية</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="images/logo.png" alt="Logo">
+</div>
+
+<h1>مكتبة التحميل</h1>
+
+<p>كتالوجات الشركات - ملفات PDF - الداتا شيت - دليل الاستخدام</p>
+
+</header>
+
+<input type="text" id="search" placeholder="ابحث باسم الشركة">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>الشعار</th>
+
+<th>الشركة</th>
+
+<th>نوع الملف</th>
+
+<th>الوصف</th>
+
+<th>تحميل</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td><img src="images/logos/jinko.png" width="70"></td>
+<td>Jinko Solar</td>
+<td>PDF Catalog</td>
+<td>كتالوج الألواح الشمسية</td>
+<td><a href="downloads/jinko-catalog.pdf" download>تحميل</a></td>
+</tr>
+
+<tr>
+<td><img src="images/logos/trina.png" width="70"></td>
+<td>Trina Solar</td>
+<td>PDF Catalog</td>
+<td>كتالوج الألواح الشمسية</td>
+<td><a href="downloads/trina-catalog.pdf" download>تحميل</a></td>
+</tr>
+
+<tr>
+<td><img src="images/logos/ja.png" width="70"></td>
+<td>JA Solar</td>
+<td>PDF Catalog</td>
+<td>كتالوج الألواح الشمسية</td>
+<td><a href="downloads/ja-catalog.pdf" download>تحميل</a></td>
+</tr>
+
+<tr>
+<td><img src="images/logos/longi.png" width="70"></td>
+<td>LONGi Solar</td>
+<td>PDF Catalog</td>
+<td>كتالوج الألواح الشمسية</td>
+<td><a href="downloads/longi-catalog.pdf" download>تحميل</a></td>
+</tr>
+
+<tr>
+<td><img src="images/logos/canadian.png" width="70"></td>
+<td>Canadian Solar</td>
+<td>PDF Catalog</td>
+<td>كتالوج الألواح الشمسية</td>
+<td><a href="downloads/canadian-catalog.pdf" download>تحميل</a></td>
+</tr>
+
+<tr>
+<td><img src="images/logos/growatt.png" width="70"></td>
+<td>Growatt</td>
+<td>Datasheet</td>
+<td>دليل الإنفرترات</td>
+<td><a href="downloads/growatt.pdf" download>تحميل</a></td>
+</tr>
+
+<tr>
+<td><img src="images/logos/deye.png" width="70"></td>
+<td>Deye</td>
+<td>Datasheet</td>
+<td>دليل الإنفرترات</td>
+<td><a href="downloads/deye.pdf" download>تحميل</a></td>
+</tr>
+
+<tr>
+<td><img src="images/logos/invt.png" width="70"></td>
+<td>INVT</td>
+<td>Datasheet</td>
+<td>دليل الإنفرترات</td>
+<td><a href="downloads/invt.pdf" download>تحميل</a></td>
+</tr>
+
+<tr>
+<td><img src="images/logos/frecon.png" width="70"></td>
+<td>FRECON</td>
+<td>Datasheet</td>
+<td>دليل الإنفرترات</td>
+<td><a href="downloads/frecon.pdf" download>تحميل</a></td>
+</tr>
+
+<tr>
+<td><img src="images/logos/felicity.png" width="70"></td>
+<td>Felicity Solar</td>
+<td>Catalog</td>
+<td>بطاريات وإنفرترات</td>
+<td><a href="downloads/felicity.pdf" download>تحميل</a></td>
+</tr>
+
+</tbody>
+
+</table>
+
+<script>
+
+const search=document.getElementById("search");
+
+search.addEventListener("keyup",function(){
+
+const value=this.value.toLowerCase();
+
+document.querySelectorAll("tbody tr").forEach(function(row){
+
+row.style.display=row.innerText.toLowerCase().includes(value)?"":"none";
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html> 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>المشروعات المنفذة | المهندس للطاقة الشمسية</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="images/logo.png" alt="Logo">
+</div>
+
+<h1>نماذج من مشروعاتنا المنفذة</h1>
+
+<p>AL-MUHANDIS SOLAR ENERGY</p>
+
+</header>
+
+<input type="text" id="search" placeholder="ابحث باسم المشروع أو القدرة">
+
+<div class="projects">
+
+<div class="project">
+
+<img src="images/projects/project1.jpg" alt="Project">
+
+<h3>محطة ري زراعية</h3>
+
+<table>
+
+<tr><td>القدرة</td><td>10 حصان</td></tr>
+
+<tr><td>عدد الألواح</td><td>17 لوح</td></tr>
+
+<tr><td>نوع الألواح</td><td>Jinko Solar</td></tr>
+
+<tr><td>قدرة اللوح</td><td>620W</td></tr>
+
+<tr><td>الإنفرتر</td><td>INVT</td></tr>
+
+<tr><td>الموقع</td><td>الواحات</td></tr>
+
+</table>
+
+</div>
+
+<div class="project">
+
+<img src="images/projects/project2.jpg" alt="Project">
+
+<h3>محطة ري زراعية</h3>
+
+<table>
+
+<tr><td>القدرة</td><td>20 حصان</td></tr>
+
+<tr><td>عدد الألواح</td><td>34 لوح</td></tr>
+
+<tr><td>نوع الألواح</td><td>LONGi</td></tr>
+
+<tr><td>قدرة اللوح</td><td>620W</td></tr>
+
+<tr><td>الإنفرتر</td><td>FRECON</td></tr>
+
+<tr><td>الموقع</td><td>الفيوم</td></tr>
+
+</table>
+
+</div>
+
+<div class="project">
+
+<img src="images/projects/project3.jpg" alt="Project">
+
+<h3>محطة ري زراعية</h3>
+
+<table>
+
+<tr><td>القدرة</td><td>30 حصان</td></tr>
+
+<tr><td>عدد الألواح</td><td>51 لوح</td></tr>
+
+<tr><td>نوع الألواح</td><td>Trina Solar</td></tr>
+
+<tr><td>قدرة اللوح</td><td>620W</td></tr>
+
+<tr><td>الإنفرتر</td><td>Growatt</td></tr>
+
+<tr><td>الموقع</td><td>المنيا</td></tr>
+
+</table>
+
+</div>
+
+<div class="project">
+
+<img src="images/projects/project4.jpg" alt="Project">
+
+<h3>محطة ري زراعية</h3>
+
+<table>
+
+<tr><td>القدرة</td><td>50 حصان</td></tr>
+
+<tr><td>عدد الألواح</td><td>84 لوح</td></tr>
+
+<tr><td>نوع الألواح</td><td>JA Solar</td></tr>
+
+<tr><td>قدرة اللوح</td><td>620W</td></tr>
+
+<tr><td>الإنفرتر</td><td>Deye</td></tr>
+
+<tr><td>الموقع</td><td>أسوان</td></tr>
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+
+const search=document.getElementById("search");
+
+search.addEventListener("keyup",function(){
+
+const value=this.value.toLowerCase();
+
+document.querySelectorAll(".project").forEach(function(card){
+
+card.style.display=card.innerText.toLowerCase().includes(value)?"block":"none";
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>المحطات المستعملة | المهندس للطاقة الشمسية</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="images/logo.png" alt="Logo">
+</div>
+
+<h1>المحطات المستعملة المعروضة للبيع</h1>
+
+<p>AL-MUHANDIS SOLAR ENERGY</p>
+
+</header>
+
+<input type="text" id="search" placeholder="ابحث بالقدرة أو نوع الإنفرتر أو اللوح">
+
+<div class="used-systems">
+
+<div class="card">
+
+<img src="images/used/used1.jpg" alt="محطة مستعملة">
+
+<h3>محطة طاقة شمسية 50 حصان</h3>
+
+<table>
+
+<tr><td>عدد الألواح</td><td>105 لوح</td></tr>
+
+<tr><td>قدرة اللوح</td><td>330 وات</td></tr>
+
+<tr><td>نوع الألواح</td><td>Jinko Solar</td></tr>
+
+<tr><td>الإنفرتر</td><td>FRECON 37KW</td></tr>
+
+<tr><td>الطلمبة</td><td>50 حصان</td></tr>
+
+<tr><td>الكابل</td><td>3×25 بطول 150 متر</td></tr>
+
+<tr><td>المواسير</td><td>35 ماسورة حديد</td></tr>
+
+<tr><td>الشاسيه</td><td>ثابت</td></tr>
+
+<tr><td>الحالة</td><td>مستعمل بحالة ممتازة</td></tr>
+
+</table>
+
+<a class="btn" href="contact.html">استفسر الآن</a>
+
+</div>
+
+<div class="card">
+
+<img src="images/used/used2.jpg" alt="محطة مستعملة">
+
+<h3>محطة طاقة شمسية 20 حصان</h3>
+
+<table>
+
+<tr><td>عدد الألواح</td><td>34 لوح</td></tr>
+
+<tr><td>قدرة اللوح</td><td>620 وات</td></tr>
+
+<tr><td>نوع الألواح</td><td>LONGi</td></tr>
+
+<tr><td>الإنفرتر</td><td>INVT</td></tr>
+
+<tr><td>الطلمبة</td><td>20 حصان</td></tr>
+
+<tr><td>الشاسيه</td><td>مجلفن</td></tr>
+
+<tr><td>الحالة</td><td>مستعمل</td></tr>
+
+</table>
+
+<a class="btn" href="contact.html">استفسر الآن</a>
+
+</div>
+
+<div class="card">
+
+<img src="images/used/used3.jpg" alt="محطة مستعملة">
+
+<h3>محطة طاقة شمسية 10 حصان</h3>
+
+<table>
+
+<tr><td>عدد الألواح</td><td>17 لوح</td></tr>
+
+<tr><td>قدرة اللوح</td><td>620 وات</td></tr>
+
+<tr><td>نوع الألواح</td><td>Trina Solar</td></tr>
+
+<tr><td>الإنفرتر</td><td>Growatt</td></tr>
+
+<tr><td>الطلمبة</td><td>10 حصان</td></tr>
+
+<tr><td>الحالة</td><td>جاهزة للعمل</td></tr>
+
+</table>
+
+<a class="btn" href="contact.html">استفسر الآن</a>
+
+</div>
+
+</div>
+
+<script>
+
+const search=document.getElementById("search");
+
+search.addEventListener("keyup",function(){
+
+const value=this.value.toLowerCase();
+
+document.querySelectorAll(".card").forEach(function(card){
+
+card.style.display=card.innerText.toLowerCase().includes(value)?"block":"none";
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html> 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>معرض الصور والفيديو | المهندس للطاقة الشمسية</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="images/logo.png" alt="Logo">
+</div>
+
+<h1>معرض الصور والفيديوهات</h1>
+
+<p>AL-MUHANDIS SOLAR ENERGY</p>
+
+</header>
+
+<input type="text" id="search" placeholder="ابحث باسم المشروع">
+
+<section class="gallery">
+
+<div class="gallery-item">
+
+<img src="images/gallery/project1.jpg" alt="مشروع">
+
+<h3>محطة 10 حصان</h3>
+
+<p>الواحات - ألواح Jinko - إنفرتر INVT</p>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="images/gallery/project2.jpg" alt="مشروع">
+
+<h3>محطة 20 حصان</h3>
+
+<p>LONGi + FRECON</p>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="images/gallery/project3.jpg" alt="مشروع">
+
+<h3>محطة 30 حصان</h3>
+
+<p>Trina + Growatt</p>
+
+</div>
+
+<div class="gallery-item">
+
+<img src="images/gallery/project4.jpg" alt="مشروع">
+
+<h3>محطة 50 حصان</h3>
+
+<p>JA Solar + Deye</p>
+
+</div>
+
+<div class="gallery-item">
+
+<video controls>
+
+<source src="videos/project1.mp4" type="video/mp4">
+
+</video>
+
+<h3>فيديو تنفيذ محطة</h3>
+
+</div>
+
+<div class="gallery-item">
+
+<video controls>
+
+<source src="videos/project2.mp4" type="video/mp4">
+
+</video>
+
+<h3>فيديو تشغيل محطة</h3>
+
+</div>
+
+</section>
+
+<script>
+
+const search=document.getElementById("search");
+
+search.addEventListener("keyup",function(){
+
+const value=this.value.toLowerCase();
+
+document.querySelectorAll(".gallery-item").forEach(function(item){
+
+item.style.display=item.innerText.toLowerCase().includes(value)?"block":"none";
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html> 
+/* ==========================================
+   معرض الصور والمشروعات والمحطات المستعملة
+========================================== */
+
+.projects,
+.used-systems,
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+padding:30px;
+}
+
+.project,
+.card,
+.gallery-item{
+background:#ffffff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.12);
+transition:.35s;
+}
+
+.project:hover,
+.card:hover,
+.gallery-item:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+.project img,
+.card img,
+.gallery img,
+.gallery video{
+width:100%;
+height:250px;
+object-fit:cover;
+display:block;
+}
+
+.project h3,
+.card h3,
+.gallery h3{
+padding:15px;
+text-align:center;
+color:#0b5d2a;
+font-size:22px;
+}
+
+.project table,
+.card table{
+width:95%;
+margin:15px auto;
+border-collapse:collapse;
+}
+
+.project td,
+.card td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+.project tr:nth-child(even),
+.card tr:nth-child(even){
+background:#f5f5f5;
+}
+
+.btn{
+display:block;
+width:220px;
+margin:20px auto;
+padding:12px;
+text-align:center;
+background:#0b8f45;
+color:#fff;
+text-decoration:none;
+font-size:18px;
+border-radius:10px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#066d34;
+}
+
+.gallery-item p{
+padding:0 15px 20px;
+text-align:center;
+color:#666;
+}
+
+video{
+background:#000;
+}
+
+@media(max-width:768px){
+
+.projects,
+.used-systems,
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.project img,
+.card img,
+.gallery img,
+.gallery video{
+
+height:220px;
+
+}
+
+}
+

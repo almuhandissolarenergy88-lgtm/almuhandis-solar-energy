@@ -1,1 +1,4 @@
-
+body { font-family: 'Segoe UI', sans-serif; background: #001f3f; color: white; margin: 0; }
+h1, h2 { color: #25d366; }
+.card { background: #003366; padding: 20px; border-radius: 10px; margin: 15px; border: 1px solid #25d366; }
+a { color: #25d366; }

@@ -4,30 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AL-MUHANDIS SOLAR</title>
-    <style>
-        body { font-family: sans-serif; background: #001f3f; color: white; margin: 0; text-align: center; }
-        .hero { padding: 40px 20px; }
-        h1 { color: #25d366; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; }
-        /* استبدلنا الأيقونات المعقدة بأيقونات نصية بسيطة ومضمونة الظهور */
-        .card { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2); }
-        .icon { font-size: 30px; margin-bottom: 10px; display: block; }
-        .btn { display: inline-block; padding: 15px 30px; background: #25d366; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; }
-    </style>
+    <!-- ربط ملف التنسيق -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="hero">
-        <h1>AL-MUHANDIS</h1>
-        <p>الطاقة الشمسية بأعلى جودة</p>
-    </div>
-
-    <div class="grid">
-        <div class="card"><span class="icon">☀️</span><br>ألواح شمسية</div>
-        <div class="card"><span class="icon">⚡</span><br>إنفرترات</div>
-        <div class="card"><span class="icon">💧</span><br>طلمبات مياه</div>
-        <div class="card"><span class="icon">🔋</span><br>بطاريات</div>
-    </div>
-
-    <a href="https://wa.me/201029394526" class="btn">تواصل معنا واتساب</a>
+    <div class="header"><h1>AL-MUHANDIS</h1></div>
+    <div class="grid" id="services"></div>
+    <a href="https://wa.me/201029394526" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+    <!-- ربط ملف الحركة -->
+    <script src="js/script.js"></script>
 </body>
 </html>

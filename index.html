@@ -4,33 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AL-MUHANDIS SOLAR</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #001f3f; color: white; margin: 0; padding: 0; }
-        .hero { text-align: center; padding: 50px 20px; animation: fadeIn 2s; }
-        h1 { font-size: 2.5em; margin: 0; color: #25d366; }
+        body { font-family: sans-serif; background: #001f3f; color: white; margin: 0; text-align: center; }
+        .hero { padding: 40px 20px; }
+        h1 { color: #25d366; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; }
-        .card { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 20px; text-align: center; backdrop-filter: blur(10px); transition: 0.5s; border: 1px solid rgba(255,255,255,0.2); }
-        .card:hover { transform: scale(1.1); background: rgba(255,255,255,0.2); }
-        .btn { display: block; margin: 30px auto; padding: 20px 40px; background: #25d366; color: white; text-decoration: none; border-radius: 50px; text-align: center; font-weight: bold; width: fit-content; animation: pulse 2s infinite; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        /* استبدلنا الأيقونات المعقدة بأيقونات نصية بسيطة ومضمونة الظهور */
+        .card { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2); }
+        .icon { font-size: 30px; margin-bottom: 10px; display: block; }
+        .btn { display: inline-block; padding: 15px 30px; background: #25d366; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
     <div class="hero">
         <h1>AL-MUHANDIS</h1>
-        <p>مستقبل الطاقة الشمسية بين يديك</p>
+        <p>الطاقة الشمسية بأعلى جودة</p>
     </div>
 
     <div class="grid">
-        <div class="card"><i class="fas fa-solar-panel fa-3x"></i><p>ألواح Jinko</p></div>
-        <div class="card"><i class="fas fa-bolt fa-3x"></i><br>إنفرترات Growatt</div>
-        <div class="card"><i class="fas fa-water fa-3x"></i><br>طلمبات مياه</div>
-        <div class="card"><i class="fas fa-battery-full fa-3x"></i><br>بطاريات ليثيوم</div>
+        <div class="card"><span class="icon">☀️</span><br>ألواح شمسية</div>
+        <div class="card"><span class="icon">⚡</span><br>إنفرترات</div>
+        <div class="card"><span class="icon">💧</span><br>طلمبات مياه</div>
+        <div class="card"><span class="icon">🔋</span><br>بطاريات</div>
     </div>
 
-    <a href="https://wa.me/201029394526" class="btn"><i class="fab fa-whatsapp"></i> تواصل مع المهندس الآن</a>
+    <a href="https://wa.me/201029394526" class="btn">تواصل معنا واتساب</a>
 </body>
 </html>
-

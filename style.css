@@ -1,5 +1,6 @@
-body { font-family: 'Arial', sans-serif; background-color: #f0f2f5; margin: 0; direction: rtl; text-align: center; }
-.container { background: white; margin: 20px auto; padding: 30px; max-width: 800px; border-radius: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-h1 { color: #2d6a4f; margin-bottom: 20px; }
-p { font-size: 18px; color: #444; line-height: 1.8; }
-marquee { border-bottom: 2px solid #2d6a4f; }
+body { font-family: sans-serif; background: #001f3f; color: white; margin: 0; padding: 20px; }
+.header { text-align: center; padding: 20px; color: #25d366; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.card { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; text-align: center; border: 1px solid #25d366; }
+.whatsapp-btn { position: fixed; bottom: 30px; left: 30px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; font-size: 24px; animation: pulse 2s infinite; }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }

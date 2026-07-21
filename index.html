@@ -14,18 +14,34 @@
         .header-section {
             background-color: #0d5c2f;
             color: white;
-            padding: 30px 15px;
+            padding: 25px 15px;
             text-align: center;
         }
         .header-section h1 { font-size: 22px; margin-bottom: 5px; }
         .header-section p { font-size: 13px; color: #d1e7dd; margin-bottom: 8px; }
-        .sub-text { font-size: 12px; color: #ffc107; margin-bottom: 12px; font-weight: bold; }
+        
+        /* الشريط المتحرك (Marquee) */
+        .marquee-container {
+            background-color: #042914;
+            color: #ffc107;
+            padding: 10px 0;
+            font-size: 13px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 15px;
+        }
+        .marquee-container marquee {
+            width: 100%;
+        }
+
         .header-btns {
             display: flex;
             justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
-            margin-top: 15px;
+            margin-top: 12px;
         }
         .main-btn {
             background-color: #ffc107;
@@ -37,6 +53,28 @@
             font-weight: bold;
         }
         .main-btn.whatsapp { background-color: #25d366; color: white; }
+
+        /* معرض الصور المصغر داخل الموقع */
+        .gallery-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 0 15px;
+            margin-bottom: 15px;
+        }
+        .gallery-img {
+            background-color: #ddd;
+            border-radius: 8px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 12px;
+            border: 2px dashed #0d5c2f;
+            text-align: center;
+            padding: 5px;
+        }
 
         /* الأقسام العامة */
         .content-card {
@@ -54,7 +92,7 @@
             align-items: center;
             gap: 8px;
         }
-        .content-card p {
+        .content-card p, .content-card li {
             font-size: 13px;
             color: #555;
             line-height: 1.6;
@@ -64,8 +102,6 @@
             padding-right: 20px;
         }
         .content-card li {
-            font-size: 13px;
-            color: #555;
             margin-bottom: 6px;
         }
 
@@ -141,15 +177,36 @@
 </head>
 <body>
 
-    <!-- الهيدر الرئيسي والشريط المتحرك/التعريفي -->
+    <!-- الهيدر الرئيسي -->
     <div class="header-section">
         <h1>AL-MUHANDIS SOLAR ENERGY</h1>
         <p>Powering the Future with Solar Energy</p>
-        <div class="sub-text">⭐ رواد حلول الطاقة الشمسية في مصر</div>
-        <p style="font-size: 12px;">بيع • شراء • تصميم • توريد • تركيب • صيانة<br>أنظمة جديدة ومستعملة بأعلى جودة وأفضل الأسعار في السوق المصري.</p>
+    </div>
+
+    <!-- الشريط المتحرك (Marquee) للخدمات والعروض -->
+    <div class="marquee-container">
+        <marquee behavior="scroll" direction="right" scrollamount="5">
+            ⭐ رواد حلول الطاقة الشمسية في مصر &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; بيع • شراء • تصميم • توريد • تركيب • صيانة &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; أنظمة جديدة ومستعملة بأعلى جودة وأفضل الأسعار &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; تواصل معنا الآن عبر الواتساب للاستفسار!
+        </marquee>
+    </div>
+
+    <!-- أزرار سريعة تحت الهيدر -->
+    <div style="text-align: center; margin-bottom: 20px;">
         <div class="header-btns">
             <a href="https://wa.me/201029394526" class="main-btn">اطلب عرض سعر الآن</a>
             <a href="https://wa.me/201029394526" class="main-btn whatsapp">تواصل معنا عبر واتساب</a>
+        </div>
+    </div>
+
+    <!-- قسم الصور المعرض (مكان الصور) -->
+    <div class="gallery-section">
+        <div class="gallery-img">
+            <i class="fa-solid fa-solar-panel" style="font-size: 20px; display: block; margin-bottom: 5px; color: #0d5c2f;"></i>
+            محطات الطاقة الشمسية
+        </div>
+        <div class="gallery-img">
+            <i class="fa-solid fa-battery-full" style="font-size: 20px; display: block; margin-bottom: 5px; color: #0d5c2f;"></i>
+            الإنفرترات والبطاريات
         </div>
     </div>
 

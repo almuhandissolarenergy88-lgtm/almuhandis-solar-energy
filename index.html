@@ -10,7 +10,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #f4f6f9; color: #333333; direction: rtl; text-align: right; padding-bottom: 70px; }
         
-        /* الهيدر الأخضر الرئيسي */
+        /* الهيدر الرئيسي */
         .header-section {
             background-color: #0d5c2f;
             color: white;
@@ -32,9 +32,7 @@
             box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
             margin-bottom: 15px;
         }
-        .marquee-container marquee {
-            width: 100%;
-        }
+        .marquee-container marquee { width: 100%; }
 
         .header-btns {
             display: flex;
@@ -54,7 +52,7 @@
         }
         .main-btn.whatsapp { background-color: #25d366; color: white; }
 
-        /* معرض الصور المصغر داخل الموقع */
+        /* معرض الصور المصغر */
         .gallery-section {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -63,14 +61,16 @@
             margin-bottom: 15px;
         }
         .gallery-img {
-            background-color: #ddd;
+            background-color: #e9ecef;
             border-radius: 8px;
-            height: 120px;
+            height: 110px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: #555;
+            color: #0d5c2f;
             font-size: 12px;
+            font-weight: bold;
             border: 2px dashed #0d5c2f;
             text-align: center;
             padding: 5px;
@@ -103,6 +103,12 @@
         }
         .content-card li {
             margin-bottom: 6px;
+        }
+        .sub-category {
+            margin-top: 12px;
+            font-weight: bold;
+            color: #0d5c2f;
+            font-size: 13px;
         }
 
         /* قسم الفيديوهات */
@@ -137,6 +143,7 @@
         }
         .contact-card h3 { color: #ffc107; margin-bottom: 12px; font-size: 17px; display: flex; align-items: center; gap: 8px; }
         .contact-card p { color: #ffffff; font-size: 13px; margin-bottom: 8px; line-height: 1.6; }
+        .contact-card a { color: #ffc107; text-decoration: none; }
 
         /* الفوتر */
         footer {
@@ -183,30 +190,30 @@
         <p>Powering the Future with Solar Energy</p>
     </div>
 
-    <!-- الشريط المتحرك (Marquee) للخدمات والعروض -->
+    <!-- الشريط المتحرك (Marquee) -->
     <div class="marquee-container">
         <marquee behavior="scroll" direction="right" scrollamount="5">
-            ⭐ رواد حلول الطاقة الشمسية في مصر &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; بيع • شراء • تصميم • توريد • تركيب • صيانة &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; أنظمة جديدة ومستعملة بأعلى جودة وأفضل الأسعار &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; تواصل معنا الآن عبر الواتساب للاستفسار!
+            🌟 رواد حلول الطاقة الشمسية في مصر &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; بيع • شراء • تصميم • توريد • تركيب • صيانة &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; أنظمة جديدة ومستعملة بأعلى جودة وأفضل الأسعار في السوق المصري
         </marquee>
     </div>
 
-    <!-- أزرار سريعة تحت الهيدر -->
-    <div style="text-align: center; margin-bottom: 20px;">
+    <!-- أزرار سريعة -->
+    <div style="text-align: center; margin-bottom: 15px;">
         <div class="header-btns">
             <a href="https://wa.me/201029394526" class="main-btn">اطلب عرض سعر الآن</a>
             <a href="https://wa.me/201029394526" class="main-btn whatsapp">تواصل معنا عبر واتساب</a>
         </div>
     </div>
 
-    <!-- قسم الصور المعرض (مكان الصور) -->
+    <!-- معرض الصور المصغر -->
     <div class="gallery-section">
         <div class="gallery-img">
-            <i class="fa-solid fa-solar-panel" style="font-size: 20px; display: block; margin-bottom: 5px; color: #0d5c2f;"></i>
-            محطات الطاقة الشمسية
+            <i class="fa-solid fa-solar-panel" style="font-size: 22px; margin-bottom: 5px;"></i>
+            الألواح والمحطات
         </div>
         <div class="gallery-img">
-            <i class="fa-solid fa-battery-full" style="font-size: 20px; display: block; margin-bottom: 5px; color: #0d5c2f;"></i>
-            الإنفرترات والبطاريات
+            <i class="fa-solid fa-bolt" style="font-size: 22px; margin-bottom: 5px;"></i>
+            الإنفرترات الذكية
         </div>
     </div>
 
@@ -214,24 +221,23 @@
     <div class="content-card">
         <h3><i class="fa-solid fa-users"></i> من نحن؟</h3>
         <p>مرحبًا بكم في AL-MUHANDIS SOLAR ENERGY. نحن شركة متخصصة في تصميم، تنفيذ، وصيانة محطات الطاقة الشمسية. نوفر كافة مستلزمات وأنظمة الطاقة المتجددة التي تغطي احتياجات المنازل، المزارع، المصانع، والآبار الارتوازية.</p>
-        <p style="margin-top: 8px;">تميزنا لا يقتصر على الجديد فقط؛ بل ننفرد بتقديم حلول مبتكرة في بيع وشراء المحطات والأنظمة المستعملة تلبي جميع الاحتياجات والقدرات التمويلية بميزانيات مرنة.</p>
+        <p style="margin-top: 8px;">تميزنا لا يقتصر على الجديد فقط؛ بل ننفرد بتقديم حلول مبتكرة في بيع وشراء المحطات والأنظمة المستعملة لنلبي جميع الاحتياجات والقدرات التمويلية بميزانيات مرنة.</p>
     </div>
 
-    <!-- رؤيتنا ورسالتنا -->
+    <!-- رؤيتنا -->
     <div class="content-card">
         <h3><i class="fa-solid fa-eye"></i> رؤيتنا</h3>
-        <p>أن نكون التحول الرقمي والبيئي في مجال الطاقة النظيفة بمصر، من خلال ترسيخ مبادئ الجودة العالية، الالتزام الصارم بمواعيد التسليم، وتقديم خدمة عملاء استثنائية تفوق التوقعات.</p>
-        <h3 style="margin-top: 15px;"><i class="fa-solid fa-bullseye"></i> رسالتنا</h3>
-        <p>توفير حلول طاقة شمسية آمنة وموثوقة واقتصادية، باستخدام أفضل المكونات والمنتجات العالمية، مع الالتزام بالجودة والدقة في التنفيذ وخدمة العملاء قبل وبعد البيع.</p>
+        <p>أن نقود التحول الرقمي والبيئي في مجال الطاقة النظيفة بمصر، من خلال ترسيخ مبادئ الجودة العالية، الالتزام الصارم بمواعيد التسليم، وتقديم خدمة عملاء استثنائية تفوق التوقعات.</p>
     </div>
 
     <!-- سياسة الضمان -->
     <div class="content-card">
-        <h3><i class="fa-solid fa-shield-halved"></i> سياسة الضمان</h3>
+        <h3><i class="fa-solid fa-shield-halved"></i> سياسة الضمان (أمان وثقة ممتدة)</h3>
+        <p>لأننا نثق في جودة ما نقدمه وفي كفاءة مهندسينا وفنيينا، نوفر أقوى برامج الضمان في السوق المصري:</p>
         <ul>
-            <li>ضمان يصل إلى 30 سنة: على الأنظمة والمحطات الجديدة.</li>
-            <li>ضمان شامل على التركيب: نضمن لك سلامة وأمان التركيبات.</li>
-            <li>ضمان حقيقي على الأنظمة المستعملة: فحص وتأكيد كفاءة القطع.</li>
+            <li><strong>ضمان يصل إلى 30 سنة:</strong> على الأنظمة والمحطات الجديدة (حسب شروط المصنع وكفاءة الألواح الممتدة).</li>
+            <li><strong>ضمان شامل على التركيب:</strong> نضمن لك سلامة وأمان التركيبات الهندسية والشاسيهات والتوصيلات ضد أي عيوب تنفيذية.</li>
+            <li><strong>ضمان حقيقي على الأنظمة المستعملة:</strong> لتبدأ مشروعك براحة بال تامة، نوفر ضماناً خاصاً يفحص ويؤكد كفاءة وجودة القطع المستعملة قبل وبعد التشغيل.</li>
         </ul>
     </div>
 
@@ -239,20 +245,52 @@
     <div class="content-card">
         <h3><i class="fa-solid fa-gears"></i> خدماتنا</h3>
         <ul>
-            <li>تصميم وهندسة محطات الطاقة الشمسية.</li>
-            <li>تركيب وتشغيل جميع الأنظمة (On-Grid / Off-Grid / Hybrid).</li>
-            <li>تجارة المستعمل: شراء وبيع المحطات.</li>
-            <li>صيانة الإنفرترات، الغواطس، والمولدات.</li>
-            <li>تنفيذ مشروعات ري الأبار وإنارة المنازل والمزارع والمصانع.</li>
+            <li><strong>التصميم والهندسة:</strong> تخطيط وتصميم محطات الطاقة الشمسية بأحدث البرامج الهندسية.</li>
+            <li><strong>التركيب والتشغيل:</strong> إشراف هندسي متكامل على تركيب وتشغيل جميع الأنظمة (On-Grid / Off-Grid / Hybrid).</li>
+            <li><strong>تجارة المستعمل:</strong> شراء المحطات والأنظمة المستعملة بأفضل وأعلى قيم تسعيرية في السوق.</li>
+            <li><strong>الصيانة التخصصية:</strong> صيانة دورية وطارئة للإنفرترات، الغواطس، والمولدات لضمان أعلى كفاءة تشغيلية.</li>
+            <li><strong>التغطية الجغرافية:</strong> مستعدون لتنفيذ وإدارة المشروعات في جميع أنحاء جمهورية مصر العربية.</li>
         </ul>
     </div>
 
     <!-- كتالوج منتجاتنا -->
     <div class="content-card">
-        <h3><i class="fa-solid fa-box-archive"></i> كتالوج منتجاتنا</h3>
-        <p><strong>☀️ الألواح الشمسية:</strong> Jinko, Trina, JA Solar, LONGi, Canadian, TW Solar.</p>
-        <p style="margin-top: 8px;"><strong>⚡ الإنفرترات:</strong> Growatt, INVT, FRECON, Felicity, Deye, Solis.</p>
-        <p style="margin-top: 8px;"><strong>💧 الغواطس:</strong> مواطير هندي ومواتير تركي استانلس.</p>
+        <h3><i class="fa-solid fa-box-archive"></i> كتالوج منتجاتنا (جديد ومستعمل)</h3>
+        
+        <div class="sub-category">☀️ الألواح الشمسية (Solar Panels)</div>
+        <p>نتميز بتوفير كبرى الماركات العالمية بكافة القدرات (تكنولوجيا الوجه الواحد والوجهين - Mono & Bifacial):<br>
+        Jinko Solar | Trina Solar | JA Solar | LONGi Solar | Canadian Solar | TW Solar</p>
+
+        <div class="sub-category">⚡ الإنفرترات (Inverters)</div>
+        <p>أجهزة تحويل الطاقة وأنظمة التحكم الذكية من أفضل المصنعين عالمياً:<br>
+        Growatt | INVT | FRECON | Felicity | Deye | Solis</p>
+
+        <div class="sub-category">💧 الغواطس والمواتير (Solar Pumps)</div>
+        <p>حلول ذكية لضخ المياه من الآبار للمزارع والمشروعات النائية:<br>
+        - مواتير هندي (كفاءة واعتمادية عالية).<br>
+        - مواتير تركي استانلس (مقاومة ممتازة للتآكل والظروف الصعبة).</p>
+
+        <div class="sub-category">🛠 المواسير وأنظمة التدفق</div>
+        <p>- مواسير بلاستيك هندي: متوفرة بجميع المقاسات (طول القطعة 3 متر).<br>
+        - مواسير حديد مجلفن: مقاومة للصدأ وعوامل الطقس، بجميع المقاسات (أطوال 3 متر و 6 متر).</p>
+
+        <div class="sub-category">🏗 الشاسيهات وهياكل التثبيت</div>
+        <p>- شاسيهات ثابتة ومتحركة (معدلة لتتبع الشمس). مصنعة من الحديد المجلفن عالي الجودة ومقاوم للصدأ، وتصنيع خاص حسب الطلب.</p>
+
+        <div class="sub-category">🔌 الكابلات والتوصيلات</div>
+        <p>- كابلات تركي معتمدة ومقاومة لدرجات الحرارة العالية، متوفرة بجميع الأقطار والمقاسات (DC / AC).</p>
+    </div>
+
+    <!-- لماذا تختارنا -->
+    <div class="content-card">
+        <h3><i class="fa-solid fa-star"></i> لماذا تختار "المهندس للطاقة الشمسية"؟</h3>
+        <ul>
+            <li><strong>الخبرة الفنية:</strong> فريق هندسي متخصص يضمن لك أعلى كفاءة وأطول عمر افتراضي للمحطة.</li>
+            <li><strong>مرونة الميزانية:</strong> نوفر خيارات "الجديد" الفاخر و"المستعمل" بحالة ممتازة لتناسب ميزانيتك.</li>
+            <li><strong>شراء المستعمل:</strong> نتيح لك تجديد محطتك القديمة عبر استبدالها أو بيعها لنا بأفضل سعر.</li>
+            <li><strong>الدعم الفني:</strong> خدمات ما بعد البيع والصيانة الدورية تضمن عدم توقف إنتاجك من الطاقة.</li>
+            <li><strong>الانتشار الجغرافي:</strong> أينما كان مشروعك في مصر، نصلك بفرق العمل والمعدات الخاصة بنا.</li>
+        </ul>
     </div>
 
     <!-- فيديوهات المشاريع -->
@@ -267,19 +305,20 @@
     <!-- تواصل معنا -->
     <div class="contact-card">
         <h3><i class="fa-solid fa-phone"></i> تواصل معنا الآن</h3>
-        <p><i class="fa-solid fa-location-dot"></i> <strong>المقر الرئيسي:</strong> محافظة الجيزة - شارع الثلاثيني - متفرع من شارع ترعة الزمر.</p>
-        <p><i class="fa-brands fa-whatsapp"></i> <strong>واتساب:</strong> 01029394526</p>
+        <p><i class="fa-solid fa-location-dot"></i> <strong>المقر الرئيسي:</strong> محافظة الجيزة – شارع الثلاثيني – متفرع من شارع ترعة الزمر.</p>
+        <p><i class="fa-brands fa-whatsapp"></i> <strong>واتساب:</strong> <a href="https://wa.me/201029394526">01029394526</a></p>
         <p><i class="fa-solid fa-envelope"></i> <strong>البريد الإلكتروني:</strong> almuhandissolarenergy88@gmail.com</p>
-        <p><i class="fa-solid fa-globe"></i> <strong>فيسبوك:</strong> Ahmad SOLAR ENERGY</p>
+        <p><i class="fa-solid fa-globe"></i> <strong>فيسبوك (صفحة):</strong> Ahmad SOLAR ENERGY</p>
+        <p><i class="fa-solid fa-users-rectangle"></i> <strong>فيسبوك (جروب):</strong> SOLAR ENERGY</p>
     </div>
 
     <!-- الفوتر -->
     <footer>
-        <p>AL-MUHANDIS SOLAR ENERGY</p>
+        <p>AL-MUHANDIS SOLAR ENERGY - Powering the Future</p>
         <p>جميع الحقوق محفوظة © 2026</p>
     </footer>
 
-    <!-- الأزرار العائمة (واتساب واتصال) -->
+    <!-- الأزرار العائمة -->
     <div class="floating-buttons">
         <a href="https://wa.me/201029394526" class="float-btn whatsapp-float" target="_blank" title="واتساب">
             <i class="fa-brands fa-whatsapp"></i>

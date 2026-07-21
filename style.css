@@ -1,4 +1,4 @@
-/* تصميم موقع المهندس للطاقة الشمسية */
+/* التصميم العام */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,29 +11,82 @@ body {
     direction: rtl;
     text-align: right;
 }
+
+/* الهيدر واسم الموقع */
 header {
     background-color: #1e3e62;
-    padding: 20px;
+    padding: 25px 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.logo i {
+    font-size: 32px;
+    color: #ff6500;
+}
 header h1 {
     color: #ff6500;
-    font-size: 24px;
-    margin-bottom: 5px;
+    font-size: 28px;
 }
+header p {
+    color: #cfd8dc;
+    margin-top: 5px;
+}
+
+/* المحتوى */
 .hero {
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
+.hero h2 {
+    margin-bottom: 15px;
+}
+.hero p {
+    margin-bottom: 25px;
+    color: #b0bec5;
+}
+
+/* زر الواتساب الرئيسي داخل الصفحة */
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     background-color: #25d366;
     color: white;
     padding: 12px 25px;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
-    margin-top: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #20ba5a;
+}
+
+/* زر الواتساب العائم الثابت */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+.floating-whatsapp:hover {
+    transform: scale(1.1);
 }

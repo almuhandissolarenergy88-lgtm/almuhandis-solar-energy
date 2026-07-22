@@ -8,17 +8,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-dark: #041c14;
-            --primary-blue: #092c4c;
+            --primary-dark: #03140f;
+            --primary-blue: #07223b;
             --accent-gold: #f39c12;
             --accent-yellow: #f1c40f;
-            --bg-color: #f8f9fa;
-            --text-color: #333333;
+            --bg-color: #f4f6f8;
+            --text-color: #2c3e50;
             --white: #ffffff;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--bg-color); color: var(--text-color); direction: rtl; text-align: right; padding-bottom: 70px; }
         
+        /* شريط الذكاء الاصطناعي (الوقت، التاريخ، الطقس، والذكاء الاصطناعي) */
+        .ai-top-bar {
+            background: linear-gradient(90deg, #022014, #043825, #083053);
+            color: var(--white);
+            padding: 8px 15px;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            border-bottom: 2px solid var(--accent-gold);
+        }
+        .ai-badge {
+            background: rgba(243, 156, 18, 0.2);
+            color: var(--accent-yellow);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border: 1px solid var(--accent-gold);
+        }
+        .ai-info-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
         /* الشريط العلوي (Navbar) */
         .navbar {
             background-color: var(--primary-dark);
@@ -28,23 +59,24 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            border-bottom: 3px solid var(--accent-gold);
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         .nav-logo {
-            font-size: 16px;
-            font-weight: bold;
+            font-size: 18px;
+            font-weight: 900;
             color: var(--accent-gold);
             display: flex;
             align-items: center;
             gap: 8px;
             text-decoration: none;
+            letter-spacing: 0.5px;
         }
         .nav-links {
             display: flex;
-            gap: 15px;
+            gap: 18px;
             list-style: none;
             align-items: center;
             flex-wrap: wrap;
@@ -53,63 +85,81 @@
             color: var(--white);
             text-decoration: none;
             font-size: 13px;
+            font-weight: 600;
             transition: color 0.3s;
         }
         .nav-links a:hover, .nav-links a.active { color: var(--accent-yellow); }
         .nav-phone {
-            background: #25d366;
+            background: linear-gradient(135deg, #25d366, #1ebe57);
             color: var(--white);
-            padding: 6px 12px;
-            border-radius: 20px;
+            padding: 7px 15px;
+            border-radius: 25px;
             text-decoration: none;
             font-size: 13px;
             font-weight: bold;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
+            box-shadow: 0 2px 6px rgba(37, 211, 102, 0.4);
         }
 
-        /* قسم الهيرو (Hero Section) */
+        /* قسم الهيرو (Hero Section) الفخم */
         .hero-section {
-            background: linear-gradient(rgba(4, 28, 20, 0.85), rgba(9, 44, 76, 0.85)), url('https://images.unsplash.com/photo-1509391365360-e944cf427c7d?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(3, 20, 15, 0.90), rgba(7, 34, 59, 0.90)), url('https://images.unsplash.com/photo-1509391365360-e944cf427c7d?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
             color: var(--white);
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            position: relative;
         }
         .hero-title {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 900;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             color: var(--white);
         }
         .hero-subtitle {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 900;
             color: var(--accent-gold);
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 12px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
         }
         .hero-desc {
             font-size: 15px;
-            color: #e2e8f0;
-            margin-bottom: 20px;
+            color: #d1d5db;
+            margin-bottom: 25px;
             font-weight: bold;
         }
 
-        /* بانر نحن مستعدون لشراء المحطات */
+        /* شارة الإنجاز العائمة داخل الهيرو */
+        .hero-badge-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--accent-gold);
+            padding: 8px 18px;
+            border-radius: 30px;
+            color: var(--accent-yellow);
+            font-size: 13px;
+            font-weight: bold;
+            backdrop-filter: blur(5px);
+        }
+
+        /* بانر شراء المحطات */
         .buy-banner {
             background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
             color: var(--white);
-            padding: 15px;
+            padding: 16px;
             text-align: center;
             font-size: 15px;
             font-weight: bold;
             border-top: 3px solid var(--accent-gold);
             border-bottom: 3px solid var(--accent-gold);
-            margin: 20px 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            margin: 25px 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         /* شبكة المنتجات الرئيسية (Cards) */
@@ -117,131 +167,158 @@
         .section-title {
             text-align: center;
             color: var(--primary-dark);
-            font-size: 20px;
-            margin: 25px 0 15px 0;
+            font-size: 22px;
+            margin: 30px 0 20px 0;
+            font-weight: 900;
             position: relative;
-            font-weight: bold;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-gold);
+            margin: 8px auto 0;
+            border-radius: 2px;
         }
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            gap: 20px;
         }
         .product-card {
             background: var(--white);
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             border: 1px solid #e2e8f0;
             text-align: center;
-            transition: transform 0.3s;
+            transition: all 0.3s ease;
         }
-        .product-card:hover { transform: translateY(-5px); }
+        .product-card:hover { transform: translateY(-7px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
         .product-card img {
             width: 100%;
-            height: 150px;
+            height: 160px;
             object-fit: cover;
-            border-bottom: 2px solid var(--primary-blue);
+            border-bottom: 3px solid var(--accent-gold);
         }
         .product-card h4 {
             background-color: var(--primary-blue);
             color: var(--white);
-            padding: 10px;
+            padding: 12px;
             font-size: 13px;
-            min-height: 45px;
+            min-height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-weight: bold;
         }
 
         /* معرض صور الأعمال */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 10px;
-            margin-top: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
         }
         .gallery-item {
             background: var(--white);
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            border: 1px solid #ddd;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s;
         }
+        .gallery-item:hover { transform: scale(1.03); }
         .gallery-item img {
             width: 100%;
-            height: 110px;
+            height: 120px;
             object-fit: cover;
         }
 
         /* شريط الشركات العالمية */
         .brands-section {
             background: var(--white);
-            padding: 20px 10px;
-            margin: 20px 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 25px 15px;
+            margin: 30px 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
             display: flex;
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
+            border: 1px solid #e2e8f0;
         }
         .brand-logo {
             font-weight: 900;
-            font-size: 18px;
+            font-size: 19px;
             letter-spacing: 0.5px;
         }
 
-        /* الفوتر السفلي كما في الصورة */
+        /* الفوتر السفلي */
         .footer-bottom {
             background-color: var(--primary-dark);
             color: var(--white);
-            padding: 25px 15px;
+            padding: 30px 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            gap: 25px;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
             border-top: 4px solid var(--accent-gold);
             font-size: 13px;
         }
-        .footer-col h5 { color: var(--accent-gold); margin-bottom: 8px; font-size: 14px; }
-        .footer-col p { color: #ccc; line-height: 1.5; }
+        .footer-col h5 { color: var(--accent-gold); margin-bottom: 10px; font-size: 15px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+        .footer-col p { color: #cbd5e1; line-height: 1.6; }
 
         /* الأزرار العائمة */
         .floating-buttons {
             position: fixed;
-            bottom: 20px;
-            left: 20px;
+            bottom: 25px;
+            left: 25px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
             z-index: 1000;
         }
         .float-btn {
-            width: 48px;
-            height: 48px;
+            width: 52px;
+            height: 52px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
-            font-size: 22px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.35);
             text-decoration: none;
+            transition: transform 0.3s;
         }
+        .float-btn:hover { transform: scale(1.1); }
         .whatsapp-float { background-color: #25d366; }
         .call-float { background-color: #007bff; }
     </style>
 </head>
 <body>
 
+    <!-- شريط ذكي بالذكاء الاصطناعي (الوقت، التاريخ، والطقس المباشر) -->
+    <div class="ai-top-bar">
+        <div class="ai-badge">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> نظام إدارة ذكي بالذكاء الاصطناعي (AI Active)
+        </div>
+        <div class="ai-info-group">
+            <span><i class="fa-solid fa-calendar-days" style="color: var(--accent-gold);"></i> <span id="current-date">جاري التحميل...</span></span>
+            <span><i class="fa-solid fa-clock" style="color: var(--accent-gold);"></i> <span id="current-time">جاري التحميل...</span></span>
+            <span><i class="fa-solid fa-cloud-sun" style="color: var(--accent-gold);"></i> الجيزة، مصر: 32°C ☀️</span>
+        </div>
+    </div>
+
     <!-- الشريط العلوي (Navbar) -->
     <nav class="navbar">
         <a href="#" class="nav-logo"><i class="fa-solid fa-solar-panel"></i> AL-MUHANDIS SOLAR</a>
         <ul class="nav-links">
-            <li><a href="#" class="active">الرئيسية</a></li>
+            <li><a href="#" class="active"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
             <li><a href="#about">من نحن</a></li>
             <li><a href="#services">خدماتنا</a></li>
             <li><a href="#products">المنتجات</a></li>
@@ -251,19 +328,22 @@
         <a href="https://wa.me/201029394526" class="nav-phone"><i class="fa-brands fa-whatsapp"></i> 01029394526</a>
     </nav>
 
-    <!-- قسم الهيرو الرئيسي -->
+    <!-- قسم الهيرو الرئيسي الفخم -->
     <header class="hero-section">
-        <h1 class="hero-title">AL-MUHANDIS</h1>
+        <div class="hero-badge-box">
+            <i class="fa-solid fa-award"></i> خبرة وجودة تضمن لك الأفضل في السوق المصري
+        </div>
+        <h1 class="hero-title" style="margin-top: 15px;">AL-MUHANDIS</h1>
         <h2 class="hero-subtitle">SOLAR ENERGY</h2>
-        <p class="hero-desc">حلول متكاملة للطاقة الشمسية - تصميم وتوريد وتركيب وصيانة</p>
+        <p class="hero-desc">حلول متكاملة للطاقة الشمسية - تصميم، توريد، تركيب، وصيانة بأعلى معايير الجودة العالمية</p>
     </header>
 
     <!-- بانر شراء المحطات -->
     <div class="buy-banner">
-        نحن مستعدون لشراء المحطات المستعملة وتركيب الجديد في أية مكان على مستوى الجمهورية 🇪🇬
+        <i class="fa-solid fa-handshake-angle"></i> نحن مستعدون لشراء المحطات المستعملة وتركيب الجديد في أية مكان على مستوى الجمهورية 🇪🇬
     </div>
 
-    <!-- شبكة المنتجات (المنتجات والخدمات) -->
+    <!-- شبكة المنتجات الرئيسية -->
     <div class="section-container" id="products">
         <h3 class="section-title">منتجاتنا المعتمدة (جديد ومستعمل)</h3>
         <div class="products-grid">
@@ -285,11 +365,11 @@
             </div>
             <div class="product-card">
                 <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=400&q=80" alt="مواسير مجلفن">
-                <h4>مواسير حديد مجلفن<br>جميع المقاسات</h4>
+                <h4>مواسير حديد مجلفن<br>جميع المقاسات والأطوال</h4>
             </div>
             <div class="product-card">
                 <img src="https://images.unsplash.com/photo-1509391365360-e944cf427c7d?auto=format&fit=crop&w=400&q=80" alt="شاسيهات">
-                <h4>شاسيهات ثابتة ومتحركة<br>حديد مجلفن</h4>
+                <h4>شاسيهات ثابتة ومتحركة<br>حديد مجلفن عالي التحمل</h4>
             </div>
             <div class="product-card">
                 <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=400&q=80" alt="كابلات تركي">
@@ -323,7 +403,7 @@
         <div class="brand-logo" style="color: #37474f;">FRECON</div>
     </div>
 
-    <!-- الفوتر السفلي كما في الصورة الأصلية -->
+    <!-- الفوتر السفلي -->
     <footer class="footer-bottom" id="contact">
         <div class="footer-col">
             <h5><i class="fa-solid fa-location-dot"></i> المقر الرئيسي</h5>
@@ -345,9 +425,21 @@
 
     <!-- الأزرار العائمة -->
     <div class="floating-buttons">
-        <a href="https://wa.me/201029394526" class="float-btn whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="tel:01029394526" class="float-btn call-float"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/201029394526" class="float-btn whatsapp-float" target="_blank" title="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="tel:01029394526" class="float-btn call-float" title="اتصال"><i class="fa-solid fa-phone"></i></a>
     </div>
+
+    <!-- كود جافاسكريبت لتحديث التاريخ والوقت تلقائياً -->
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const optionsDate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('current-date').innerText = now.toLocaleDateString('ar-EG', optionsDate);
+            document.getElementById('current-time').innerText = now.toLocaleTimeString('ar-EG');
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
 
 </body>
 </html>

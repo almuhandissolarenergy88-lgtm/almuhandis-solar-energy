@@ -9,19 +9,19 @@
     <style>
         :root {
             --primary-dark: #020c08;
-            --primary-blue: #051b30;
+            --primary-green: #043825;
             --accent-gold: #f39c12;
             --accent-yellow: #f1c40f;
-            --bg-color: #f0f4f8;
+            --bg-color: #f4f6f8;
             --text-color: #1e293b;
             --white: #ffffff;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--bg-color); color: var(--text-color); direction: rtl; text-align: right; padding-bottom: 70px; }
         
-        /* الشريط المتحرك العلوي (Marquee) المطور */
+        /* الشريط المتحرك العلوي (Marquee) */
         .marquee-container {
-            background: linear-gradient(90deg, #021b12, #042f20, #072644);
+            background: linear-gradient(90deg, #021b12, #043825, #072644);
             color: var(--accent-yellow);
             padding: 10px 0;
             font-size: 13px;
@@ -47,7 +47,7 @@
             100% { transform: translateX(100%); }
         }
 
-        /* شريط المعلومات والوقت بالذكاء الاصطناعي */
+        /* شريط معلومات الذكاء الاصطناعي والوقت */
         .ai-top-bar {
             background: var(--primary-dark);
             color: var(--white);
@@ -75,7 +75,7 @@
 
         /* الشريط العلوي (Navbar) */
         .navbar {
-            background-color: var(--primary-dark);
+            background-color: var(--primary-green);
             color: var(--white);
             padding: 12px 20px;
             display: flex;
@@ -85,10 +85,11 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border-bottom: 3px solid var(--accent-gold);
         }
         .nav-logo {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 900;
             color: var(--accent-gold);
             display: flex;
@@ -122,211 +123,202 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            box-shadow: 0 2px 8px rgba(37, 211, 102, 0.4);
         }
 
         /* قسم الهيرو (Hero Section) الفخم مع اسمك */
         .hero-section {
-            background: linear-gradient(rgba(2, 12, 8, 0.92), rgba(5, 27, 48, 0.92)), url('https://images.unsplash.com/photo-1509391365360-e944cf427c7d?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(2, 12, 8, 0.95), rgba(4, 56, 37, 0.95)), center center/cover;
             color: var(--white);
-            padding: 55px 20px;
+            padding: 45px 20px;
             text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-            position: relative;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            border-bottom: 4px solid var(--accent-gold);
         }
-        .hero-title { font-size: 28px; font-weight: 900; letter-spacing: 1px; color: var(--white); }
+        .hero-title { font-size: 26px; font-weight: 900; color: var(--white); }
         .hero-subtitle {
-            font-size: 34px;
+            font-size: 32px;
             font-weight: 900;
             color: var(--accent-gold);
-            margin-bottom: 8px;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
         }
-        /* اسمك تحت اسم الشركة في الهيرو */
+        .hero-tagline { font-size: 13px; color: #a7f3d0; margin-bottom: 12px; font-weight: 600; }
+        
+        /* اسمك تحت اسم الشركة مباشرة */
         .hero-engineer-name {
             display: inline-block;
-            background: linear-gradient(135deg, rgba(243, 156, 18, 0.2), rgba(9, 44, 76, 0.6));
+            background: rgba(243, 156, 18, 0.15);
             border: 2px solid var(--accent-gold);
             color: var(--accent-yellow);
-            padding: 10px 25px;
-            border-radius: 35px;
-            font-size: 16px;
-            font-weight: 900;
-            margin-top: 15px;
-            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
-            letter-spacing: 0.5px;
-        }
-        .hero-engineer-name span { display: block; font-size: 12px; color: #e2e8f0; font-weight: 600; margin-top: 2px; }
-        .hero-desc { font-size: 14px; color: #cbd5e1; margin-top: 15px; font-weight: bold; }
-
-        /* بانر شراء المحطات */
-        .buy-banner {
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
-            color: var(--white);
-            padding: 16px;
-            text-align: center;
+            padding: 8px 22px;
+            border-radius: 30px;
             font-size: 15px;
+            font-weight: 900;
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .hero-engineer-name span { display: block; font-size: 11px; color: #e2e8f0; font-weight: 600; margin-top: 2px; }
+
+        /* بانر الإعلان */
+        .announcement-bar {
+            background: #1e293b;
+            color: var(--accent-yellow);
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
             font-weight: bold;
-            border-top: 3px solid var(--accent-gold);
-            border-bottom: 3px solid var(--accent-gold);
-            margin: 25px 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-bottom: 2px solid var(--accent-gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
 
-        /* شبكة المنتجات الرئيسية */
-        .section-container { padding: 10px 15px; max-width: 1200px; margin: 0 auto; }
-        .section-title {
-            text-align: center;
-            color: var(--primary-dark);
-            font-size: 22px;
-            margin: 30px 0 20px 0;
-            font-weight: 900;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--accent-gold);
-            margin: 8px auto 0;
-            border-radius: 2px;
-        }
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .product-card {
+        /* حاوية الجداول */
+        .container { max-width: 1100px; margin: 25px auto; padding: 0 15px; }
+        
+        .section-box {
             background: var(--white);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border: 1px solid #e2e8f0;
-            text-align: center;
-            transition: all 0.3s ease;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border: 1px solid #cbd5e1;
         }
-        .product-card:hover { transform: translateY(-7px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
-        .product-card img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            border-bottom: 3px solid var(--accent-gold);
-        }
-        .product-card h4 {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 12px;
-            font-size: 13px;
-            min-height: 50px;
+        .section-box h3 {
+            color: var(--primary-green);
+            font-size: 18px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 8px;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 8px;
+        }
+        .table-desc {
+            font-size: 12px;
+            color: #64748b;
+            margin-bottom: 12px;
             font-weight: bold;
         }
 
-        /* معرض صور الأعمال */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-            gap: 12px;
-            margin-top: 15px;
-        }
-        .gallery-item {
+        /* الجداول الاحترافية */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            text-align: right;
             background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.06);
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s;
         }
-        .gallery-item:hover { transform: scale(1.03); }
-        .gallery-item img { width: 100%; height: 120px; object-fit: cover; }
+        .custom-table th {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 10px;
+            border: 1px solid #032b1c;
+            font-weight: bold;
+        }
+        .custom-table td {
+            padding: 9px 10px;
+            border: 1px solid #e2e8f0;
+            color: #334155;
+        }
+        .custom-table tr:nth-child(even) { background-color: #f8fafc; }
+        .custom-table tr:hover { background-color: #f1f5f9; }
 
-        /* شريط لوجوهات الشركات العالمية الفخم */
+        /* قوائم المستلزمات والكابلات */
+        .specs-list {
+            list-style: none;
+            padding: 0;
+        }
+        .specs-list li {
+            padding: 10px 12px;
+            border-bottom: 1px dashed #cbd5e1;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .specs-list li i { color: var(--accent-gold); }
+
+        /* شريط لوجوهات الشركات */
         .brands-section {
             background: var(--white);
-            padding: 25px 15px;
-            margin: 30px 15px;
-            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.06);
             display: flex;
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
-            border: 1px solid #e2e8f0;
+            gap: 15px;
+            border: 1px solid #cbd5e1;
         }
         .brand-logo {
             font-weight: 900;
-            font-size: 18px;
-            letter-spacing: 0.5px;
-            padding: 8px 15px;
-            background: #f8fafc;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            font-size: 16px;
+            padding: 6px 12px;
+            background: #f1f5f9;
+            border-radius: 6px;
+            color: var(--primary-green);
         }
 
-        /* الفوتر السفلي المتطور */
+        /* الفوتر السفلي */
         .footer-bottom {
             background-color: var(--primary-dark);
             color: var(--white);
-            padding: 30px 20px;
+            padding: 25px 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            gap: 20px;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 30px;
             border-top: 4px solid var(--accent-gold);
             font-size: 13px;
         }
-        .footer-col h5 { color: var(--accent-gold); margin-bottom: 10px; font-size: 15px; display: flex; align-items: center; justify-content: center; gap: 6px; }
-        .footer-col p { color: #cbd5e1; line-height: 1.6; }
+        .footer-col h5 { color: var(--accent-gold); margin-bottom: 8px; font-size: 14px; }
+        .footer-col p { color: #cbd5e1; line-height: 1.5; }
         
         .footer-signature {
             grid-column: 1 / -1;
             background: rgba(243, 156, 18, 0.1);
             border-top: 1px dashed rgba(243, 156, 18, 0.4);
-            padding-top: 15px;
-            margin-top: 10px;
+            padding-top: 12px;
+            margin-top: 5px;
             color: var(--accent-yellow);
             font-weight: bold;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         /* الأزرار العائمة */
         .floating-buttons {
             position: fixed;
-            bottom: 25px;
-            left: 25px;
+            bottom: 20px;
+            left: 20px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
             z-index: 1000;
         }
         .float-btn {
-            width: 52px;
-            height: 52px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
-            font-size: 24px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+            font-size: 22px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             text-decoration: none;
-            transition: transform 0.3s;
         }
-        .float-btn:hover { transform: scale(1.1); }
         .whatsapp-float { background-color: #25d366; }
         .call-float { background-color: #007bff; }
     </style>
 </head>
 <body>
 
-    <!-- الشريط المتحرك العلوي (Marquee) يضم اسمك ولوجوهات الشركات -->
+    <!-- الشريط المتحرك العلوي -->
     <div class="marquee-container">
         <div class="marquee-content">
             <span><i class="fa-solid fa-star" style="color: var(--accent-gold);"></i> إشراف هندسي: المهندس / أحمد خطرى حامد (Ahmed Khotary)</span>
@@ -354,96 +346,132 @@
 
     <!-- الشريط العلوي (Navbar) -->
     <nav class="navbar">
-        <a href="#" class="nav-logo"><i class="fa-solid fa-solar-panel"></i> AL-MUHANDIS SOLAR</a>
+        <a href="#" class="nav-logo"><i class="fa-solid fa-solar-panel"></i> AL-MUHANDIS SOLAR ENERGY</a>
         <ul class="nav-links">
             <li><a href="#" class="active"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
-            <li><a href="#products">المنتجات</a></li>
-            <li><a href="#gallery">معرض الأعمال</a></li>
+            <li><a href="#panels">الألواح</a></li>
+            <li><a href="#pumps">الطرطبات</a></li>
+            <li><a href="#cables">الكابلات</a></li>
             <li><a href="#contact">تواصل معنا</a></li>
         </ul>
         <a href="https://wa.me/201029394526" class="nav-phone"><i class="fa-brands fa-whatsapp"></i> 01029394526</a>
     </nav>
 
-    <!-- قسم الهيرو الرئيسي الفخم مع اسمك تحت اسم الشركة -->
+    <!-- قسم الهيرو الرئيسي الفخم -->
     <header class="hero-section">
-        <h1 class="hero-title">AL-MUHANDIS</h1>
-        <h2 class="hero-subtitle">SOLAR ENERGY</h2>
+        <h1 class="hero-title">AL-MUHANDIS SOLAR ENERGY</h1>
+        <h2 class="hero-subtitle">Powering the Future with Solar Energy</h2>
+        <p class="hero-tagline">رواد حلول الطاقة الشمسية في مصر | بيع - شراء - تصميم - تركيب</p>
         
-        <!-- اسمك تحت اسم الشركة مباشرة كما طلبته -->
+        <!-- اسمك تحت اسم الشركة -->
         <div class="hero-engineer-name">
             المهندس / أحمد خطرى حامد
             <span>Ahmed Khotary - خبير نظم الطاقة الشمسية</span>
         </div>
-
-        <p class="hero-desc">حلول متكاملة للطاقة الشمسية - تصميم، توريد، تركيب، وصيانة بأعلى معايير الجودة العالمية</p>
     </header>
 
-    <!-- بانر شراء المحطات -->
-    <div class="buy-banner">
+    <!-- بانر الإعلان -->
+    <div class="announcement-bar">
         <i class="fa-solid fa-handshake-angle"></i> نحن مستعدون لشراء المحطات المستعملة وتركيب الجديد في أية مكان على مستوى الجمهورية 🇪🇬
     </div>
 
-    <!-- شبكة المنتجات الرئيسية -->
-    <div class="section-container" id="products">
-        <h3 class="section-title">منتجاتنا المعتمدة (جديد ومستعمل)</h3>
-        <div class="products-grid">
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=400&q=80" alt="ألواح شمسية">
-                <h4>ألواح شمسية<br>جديد ومستعمل</h4>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1558449040-752e5576bc29?auto=format&fit=crop&w=400&q=80" alt="انفرترات">
-                <h4>إنفرترات<br>جديد ومستعمل</h4>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=400&q=80" alt="مواتير وطرمبات">
-                <h4>مواتير وطرمبات غاطس<br>جديد ومستعمل</h4>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=400&q=80" alt="مواسير بلاستيك">
-                <h4>مواسير بلاستيك هندي<br>جميع المقاسات</h4>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=400&q=80" alt="مواسير مجلفن">
-                <h4>مواسير حديد مجلفن<br>جميع المقاسات والأطوال</h4>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1509391365360-e944cf427c7d?auto=format&fit=crop&w=400&q=80" alt="شاسيهات">
-                <h4>شاسيهات ثابتة ومتحركة<br>حديد مجلفن عالي التحمل</h4>
-            </div>
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=400&q=80" alt="كابلات تركي">
-                <h4>كابلات تركي وعالمية<br>جميع المقاسات والأحجام</h4>
+    <div class="container">
+
+        <!-- 1. جدول الألواح الشمسية -->
+        <div class="section-box" id="panels">
+            <h3><i class="fa-solid fa-solar-panel"></i> 1. جدول الألواح الشمسية (Solar Panels)</h3>
+            <p class="table-desc">موسوعة الألواح الشمسية العالمية بكل المقاسات الحديثة والقدرات المناسبة لسوق المصري</p>
+            <div style="overflow-x: auto;">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>الشركة</th>
+                            <th>نوع الخلايا</th>
+                            <th>التكنولوجيا</th>
+                            <th>القدرات المتوفرة (وات)</th>
+                            <th>الاستخدام</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><b>Jinko Solar</b></td><td>Mono</td><td>PERC / N-Type / TOPCon / Bifacial</td><td>330 حتى 720 وات</td><td>محطات منزلية - تجارية - زراعية</td></tr>
+                        <tr><td><b>Trina Solar</b></td><td>Mono</td><td>PERC / N-Type / TOPCon</td><td>330 حتى 720 وات</td><td>جميع الاستخدامات</td></tr>
+                        <tr><td><b>JA Solar</b></td><td>Mono</td><td>PERC / Deep Blue / TOPCon</td><td>330 حتى 650 وات</td><td>جميع الاستخدامات</td></tr>
+                        <tr><td><b>LONGI Solar</b></td><td>Mono</td><td>Hi-MO / TOPCon</td><td>330 حتى 650 وات</td><td>منازل - مصانع - مزارع</td></tr>
+                        <tr><td><b>Canadian Solar</b></td><td>Mono</td><td>PERC / TOPCon</td><td>330 حتى 700 وات</td><td>جميع الاستخدامات</td></tr>
+                        <tr><td><b>Risen Energy</b></td><td>Mono</td><td>PERC / TOPCon</td><td>400 حتى 700 وات</td><td>محطات الطاقة</td></tr>
+                        <tr><td><b>TW Solar</b></td><td>Mono</td><td>TOPCon</td><td>540 حتى 720 وات</td><td>محطات كبيرة</td></tr>
+                        <tr><td><b>Astronergy</b></td><td>Mono</td><td>TOPCon</td><td>540 حتى 700 وات</td><td>محطات زراعية</td></tr>
+                        <tr><td><b>AIKO Solar</b></td><td>ABC Cell</td><td>N-Type ABC</td><td>440 حتى 670 وات</td><td>أعلى كفاءة</td></tr>
+                        <tr><td><b>GCL Solar</b></td><td>Mono</td><td>TOPCon</td><td>540 حتى 620 وات</td><td>محطات متوسطة وكبيرة</td></tr>
+                        <tr><td><b>Ulica Solar</b></td><td>Mono</td><td>PERC / TOPCon</td><td>450 حتى 620 وات</td><td>الاستخدام العام</td></tr>
+                        <tr><td><b>ZNShine Solar</b></td><td>Mono</td><td>TOPCon</td><td>450 حتى 620 وات</td><td>الاستخدام العام</td></tr>
+                        <tr><td><b>Jetion Solar</b></td><td>PERC</td><td>PERC</td><td>330 حتى 560 وات</td><td>محطات صغيرة ومتوسطة</td></tr>
+                        <tr><td><b>Suntech Solar</b></td><td>PERC</td><td>PERC</td><td>330 حتى 580 وات</td><td>الاستخدام العام</td></tr>
+                        <tr><td><b>Yingli Solar</b></td><td>PERC</td><td>PERC</td><td>330 حتى 550 وات</td><td>الاستخدام العام</td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </div>
 
-    <!-- معرض صور أعمالنا -->
-    <div class="section-container" id="gallery">
-        <h3 class="section-title">صور من أعمالنا ومشاريعنا</h3>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1509391365360-e944cf427c7d?auto=format&fit=crop&w=300&q=80" alt="مشروع"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=300&q=80" alt="مشروع"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=300&q=80" alt="مشروع"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558449040-752e5576bc29?auto=format&fit=crop&w=300&q=80" alt="مشروع"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=300&q=80" alt="مشروع"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1509391365360-e944cf427c7d?auto=format&fit=crop&w=300&q=80" alt="مشروع"></div>
+        <!-- 2. جدول الطرطبات الغاطسة -->
+        <div class="section-box" id="pumps">
+            <h3><i class="fa-solid fa-water"></i> 2. جدول الطرطبات الغاطسة (Submersible Pumps)</h3>
+            <p class="table-desc">متوفر طلمبات مياه غاطسة لجميع الأعماق والآبار بأعلى كفاءة تشغيل</p>
+            <div style="overflow-x: auto;">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>الشركة</th>
+                            <th>النوع</th>
+                            <th>المراحل / المقاسات</th>
+                            <th>القدرات المتوفرة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><b>Grundfos جراندفوس</b></td><td>استنلس</td><td>4, 6 و 8 بوصة</td><td>3 - 5 - 7.5 - 10 - 15 - 20 - 25 - 30 - 40 - 50 حصان</td></tr>
+                        <tr><td><b>LEO ليو</b></td><td>صيني</td><td>4 بوصة</td><td>1 - 2 - 3 - 5 - 7.5 - 10 - 15 حصان</td></tr>
+                        <tr><td><b>Shimge شيمجي</b></td><td>صيني</td><td>4 و 6 بوصة</td><td>2 - 3 - 5 - 7.5 - 10 - 15 - 20 حصان</td></tr>
+                        <tr><td><b>Ebara إيبارا</b></td><td>استنلس</td><td>4 و 6 بوصة</td><td>5 - 10 - 15 - 20 - 30 - 40 - 50 حصان</td></tr>
+                        <tr><td><b>CRI سي آر آي</b></td><td>هندي</td><td>4 و 6 بوصة</td><td>3 - 5 - 7.5 - 10 - 15 - 20 - 30 حصان</td></tr>
+                        <tr><td><b>Teemo تيمو</b></td><td>هندي</td><td>4 و 6 بوصة</td><td>3 - 5 - 7.5 - 10 - 15 - 20 - 25 حصان</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
+        <!-- 3. كابلات الطاقة الشمسية -->
+        <div class="section-box" id="cables">
+            <h3><i class="fa-solid fa-bolt"></i> 3. كابلات الطاقة الشمسية والفواطس ووصلاتها</h3>
+            <ul class="specs-list">
+                <li><i class="fa-solid fa-circle-check"></i> <b>سادسنا: الكابل النحاس الخاص بالفواطس:</b> توفر الكابل البحري الثلاثي بجميع المقاسات (3×4، 3×6، 3×10، 3×16، 3×25، 3×35، 3×50 مم²) وجميع المقاسات الأخرى من ماركات تركية خالصة معتمدة SHARK & PAKTEL.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <b>كابلات الطاقة الشمسية:</b> AC Power Cable و DC Solar Cable وكابلات نحاس بتركة بجميع المقاسات.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <b>وصلات الكابلات:</b> توفر جميع أنواع ومقاسات وصلات لحام كابلات Raychem الأصلية.</li>
+            </ul>
+        </div>
+
+        <!-- 4. مستلزمات الغواطس والآبار -->
+        <div class="section-box">
+            <h3><i class="fa-solid fa-screwdriver-wrench"></i> 4. مستلزمات الغواطس والآبار</h3>
+            <ul class="specs-list">
+                <li><i class="fa-solid fa-circle-check"></i> <b>طاقم البئر (Well Head Kit):</b> توفر جميع مستلزمات تركيب الغواطس (غللاف البئر، قاعدة البئر، أطباق الجنب، أشبَاك، قواعد تثبيت المواسير، وقواعد تثبيت الكابلات).</li>
+                <li><i class="fa-solid fa-circle-check"></i> <b>حبل الأمان (Nylon Safety Rope):</b> توفر جميع مقاسات حبل الأمان النايلون الأصلي لتحمل الأوزان العالية ومنع سقوط الطلمبة داخل البئر.</li>
+            </ul>
+        </div>
+
+        <!-- شريط الشركات العالمية -->
+        <div class="brands-section">
+            <div class="brand-logo">Jinko Solar</div>
+            <div class="brand-logo">Trina Solar</div>
+            <div class="brand-logo">JA Solar</div>
+            <div class="brand-logo">LONGi</div>
+            <div class="brand-logo">GROWATT</div>
+            <div class="brand-logo">INVT</div>
+            <div class="brand-logo">FRECON</div>
+        </div>
+
     </div>
 
-    <!-- شريط الشركات العالمية الفخم -->
-    <div class="brands-section">
-        <div class="brand-logo" style="color: #008751;">Jinko Solar</div>
-        <div class="brand-logo" style="color: #004b87;">Trina Solar</div>
-        <div class="brand-logo" style="color: #002d62;">JA Solar</div>
-        <div class="brand-logo" style="color: #d32f2f;">LONGi</div>
-        <div class="brand-logo" style="color: #ff8f00;">ZNShine</div>
-        <div class="brand-logo" style="color: #0277bd;">INVT</div>
-        <div class="brand-logo" style="color: #2e7d32;">GROWATT</div>
-        <div class="brand-logo" style="color: #37474f;">FRECON</div>
-    </div>
-
-    <!-- الفوتر السفلي متضمن اسمك في النهاية -->
+    <!-- الفوتر السفلي -->
     <footer class="footer-bottom" id="contact">
         <div class="footer-col">
             <h5><i class="fa-solid fa-location-dot"></i> المقر الرئيسي</h5>
@@ -459,10 +487,10 @@
         </div>
         <div class="footer-col">
             <h5><i class="fa-solid fa-shield-halved"></i> الجودة والضمان</h5>
-            <p>جودة عالية وضمان حقيقي<br>توريد وتركيب في جميع أنحاء مصر</p>
+            <p>توريد وتركيب في جميع أنحاء مصر</p>
         </div>
         
-        <!-- اسمك في نهاية الصفحة كما طلبته -->
+        <!-- اسمك في نهاية الصفحة -->
         <div class="footer-signature">
             <i class="fa-solid fa-user-gear"></i> تحت إشراف وإدارة: المهندس / أحمد خطرى حامد (Ahmed Khotary) &copy; 2026 جميع الحقوق محفوظة
         </div>

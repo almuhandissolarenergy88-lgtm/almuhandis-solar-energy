@@ -69,6 +69,39 @@
         .main-btn.whatsapp { background-color: #25d366; color: var(--white); }
         .main-btn.whatsapp:hover { background-color: #1ebe57; }
 
+        /* شبكة التنقل السريع للأيقونات (التي تم إرجاعها) */
+        .nav-icons-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 0 15px;
+            margin-bottom: 20px;
+        }
+        .nav-icon-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 15px 10px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--primary-color);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-icon-card:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 10px rgba(13, 92, 47, 0.3);
+        }
+        .nav-icon-card i { font-size: 24px; margin-bottom: 8px; }
+        .nav-icon-card span { font-size: 11px; font-weight: bold; }
+
         /* المحتوى والأقسام العامة */
         .content-card {
             background: var(--white);
@@ -231,8 +264,36 @@
         </div>
     </div>
 
+    <!-- شبكة الأيقونات التفاعلية السريعة (تم إرجاعها هنا) -->
+    <div class="nav-icons-grid">
+        <a href="#panels-section" class="nav-icon-card">
+            <i class="fa-solid fa-solar-panel"></i>
+            <span>الألواح الشمسية</span>
+        </a>
+        <a href="#pumps-section" class="nav-icon-card">
+            <i class="fa-solid fa-water"></i>
+            <span>الطرمبات الغاطسة</span>
+        </a>
+        <a href="#cables-section" class="nav-icon-card">
+            <i class="fa-solid fa-network-wired"></i>
+            <span>الكابلات والوصلات</span>
+        </a>
+        <a href="#well-section" class="nav-icon-card">
+            <i class="fa-solid fa-tools"></i>
+            <span>مستلزمات الآبار</span>
+        </a>
+        <a href="#used-systems" class="nav-icon-card">
+            <i class="fa-solid fa-tags"></i>
+            <span>عروض المستعمل</span>
+        </a>
+        <a href="#contact-us" class="nav-icon-card">
+            <i class="fa-solid fa-headset"></i>
+            <span>اتصل بنا</span>
+        </a>
+    </div>
+
     <!-- القسم الأول: جدول الألواح الشمسية الشامل -->
-    <div class="content-card">
+    <div id="panels-section" class="content-card">
         <h3><i class="fa-solid fa-solar-panel"></i> 1. جدول الألواح الشمسية (Solar Panels)</h3>
         <p>موسوعة الألواح الشمسية العالمية بكل التقنيات الحديثة والقدرات المتاحة في السوق المصري:</p>
         <div class="table-responsive">
@@ -269,7 +330,7 @@
     </div>
 
     <!-- القسم الثاني: الطرمبات الغاطسة -->
-    <div class="content-card">
+    <div id="pumps-section" class="content-card">
         <h3><i class="fa-solid fa-water"></i> 2. جدول الطرمبات الغاطسة (Submersible Pumps)</h3>
         <div class="table-responsive">
             <table>
@@ -294,7 +355,7 @@
     </div>
 
     <!-- القسم الثالث: الكابلات ووصلاتها -->
-    <div class="content-card">
+    <div id="cables-section" class="content-card">
         <h3><i class="fa-solid fa-network-wired"></i> 3. كابلات الطاقة الشمسية والغواطس ووصلاتها</h3>
         <ul>
             <li><strong>سادسًا: الكابل البحري الخاص بالغواطس:</strong> نوفر الكابل البحري الغاطس بجميع المقاسات (3×4، 3×6، 3×10، 3×16، 3×25، 3×35، 3×50 مم² وجميع المقاسات الأخرى) من ماركات تركية عالمية معتمدة: <strong>PAKTEL</strong> و <strong>SHARK</strong>.</li>
@@ -304,7 +365,7 @@
     </div>
 
     <!-- القسم الرابع: مستلزمات الغواطس والآبار (Well Head Kit & حبل الحرير) -->
-    <div class="content-card">
+    <div id="well-section" class="content-card">
         <h3><i class="fa-solid fa-tools"></i> 4. مستلزمات الغواطس والآبار</h3>
         <ul>
             <li><strong>ثامنًا: طقم البئر (Well Head Kit):</strong> نوفر جميع مستلزمات تركيب الغواطس (غطاء البئر، قاعدة البئر، الجلب، المشابك، قواعد تثبيت المواسير، وقواعد تثبيت الكابلات).</li>
@@ -389,7 +450,7 @@
     </div>
 
     <!-- تواصل معنا -->
-    <div class="contact-card">
+    <div id="contact-us" class="contact-card">
         <h3><i class="fa-solid fa-phone"></i> تواصل معنا الآن</h3>
         <p><i class="fa-solid fa-location-dot"></i> <strong>المقر الرئيسي:</strong> محافظة الجيزة – شارع الثلاثيني – متفرع من شارع ترعة الزمر.</p>
         <p><i class="fa-brands fa-whatsapp"></i> <strong>واتساب:</strong> <a href="https://wa.me/201029394526" target="_blank">01029394526</a></p>

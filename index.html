@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AL-MUHANDIS SOLAR ENERGY - شركة المهندس للطاقة الشمسية</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="شركة المهندس للطاقة الشمسية - تصميم، توريد، تركيب، وصيانة محطات الطاقة الشمسية، انفرترات الطلمبات، الألواح، البطاريات، والطرمبات في مصر.">
-    <meta name="keywords" content="طاقة شمسية, الواح شمسية, انفرتر طلمبات, بطاريات ليثيوم, غواطس زراعية, محطات شمسية مصر, منظومات مستعملة">
+    <meta name="description" content="شركة المهندس للطاقة الشمسية - تصميم، توريد، تركيب، وصيانة محطات الطاقة الشمسية، انفرترات الطلمبات، الألواح، الكابلات، ومستلزمات الغواطس في مصر.">
+    <meta name="keywords" content="طاقة شمسية, الواح شمسية, انفرتر طلمبات, كابلات بحرية, Well Head Kit, غواطس زراعية, محطات شمسية مصر">
     <!-- مكتبة الأيقونات والخطوط -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -68,39 +68,6 @@
         .main-btn:hover { background-color: #e0a800; transform: translateY(-2px); }
         .main-btn.whatsapp { background-color: #25d366; color: var(--white); }
         .main-btn.whatsapp:hover { background-color: #1ebe57; }
-
-        /* شبكة التنقل السريع للأيقونات */
-        .nav-icons-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            padding: 0 15px;
-            margin-bottom: 20px;
-        }
-        .nav-icon-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 15px 10px;
-            text-align: center;
-            text-decoration: none;
-            color: var(--primary-color);
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .nav-icon-card:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
-            transform: translateY(-3px);
-            border-color: var(--primary-color);
-            box-shadow: 0 4px 10px rgba(13, 92, 47, 0.3);
-        }
-        .nav-icon-card i { font-size: 24px; margin-bottom: 8px; }
-        .nav-icon-card span { font-size: 11px; font-weight: bold; }
 
         /* المحتوى والأقسام العامة */
         .content-card {
@@ -169,6 +136,24 @@
         .used-system-box th { background-color: var(--primary-dark); border-color: rgba(255,255,255,0.1); }
         .used-system-box td { border-color: rgba(255,255,255,0.1); color: #f8f9fa; }
         .used-system-box tr:nth-child(even) { background-color: rgba(255,255,255,0.05); }
+
+        /* شبكة مميزات الشركة */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .feature-item {
+            background: #f8f9fa;
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
 
         /* تواصل معنا */
         .contact-card {
@@ -246,37 +231,9 @@
         </div>
     </div>
 
-    <!-- أزرار الأيقونات التفاعلية السريعة -->
-    <div class="nav-icons-grid">
-        <a href="#panels-section" class="nav-icon-card">
-            <i class="fa-solid fa-solar-panel"></i>
-            <span>الألواح الشمسية</span>
-        </a>
-        <a href="#pump-inverters" class="nav-icon-card">
-            <i class="fa-solid fa-bolt"></i>
-            <span>الإنفرترات</span>
-        </a>
-        <a href="#pumps-section" class="nav-icon-card">
-            <i class="fa-solid fa-water"></i>
-            <span>الطرمبات الغاطسة</span>
-        </a>
-        <a href="#cables-pipes" class="nav-icon-card">
-            <i class="fa-solid fa-network-wired"></i>
-            <span>الكابلات والمواسير</span>
-        </a>
-        <a href="#used-systems" class="nav-icon-card">
-            <i class="fa-solid fa-tags"></i>
-            <span>عروض المستعمل</span>
-        </a>
-        <a href="#contact-us" class="nav-icon-card">
-            <i class="fa-solid fa-headset"></i>
-            <span>اتصل بنا</span>
-        </a>
-    </div>
-
     <!-- القسم الأول: جدول الألواح الشمسية الشامل -->
-    <div id="panels-section" class="content-card">
-        <h3><i class="fa-solid fa-solar-panel"></i> جدول رقم (1) — الألواح الشمسية (Solar Panels)</h3>
+    <div class="content-card">
+        <h3><i class="fa-solid fa-solar-panel"></i> 1. جدول الألواح الشمسية (Solar Panels)</h3>
         <p>موسوعة الألواح الشمسية العالمية بكل التقنيات الحديثة والقدرات المتاحة في السوق المصري:</p>
         <div class="table-responsive">
             <table>
@@ -309,38 +266,11 @@
                 </tbody>
             </table>
         </div>
-
-        <h4 style="color: var(--primary-color); margin: 15px 0 8px 0; font-size: 14px;">أنواع الخلايا والتكنولوجيات المستخدمة:</h4>
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>النوع</th>
-                        <th>الوصف</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td><strong>Mono PERC</strong></td><td>الأكثر انتشارًا وكفاءة عالية</td></tr>
-                    <tr><td><strong>N-Type</strong></td><td>عمر أطول وأداء أفضل في الحرارة</td></tr>
-                    <tr><td><strong>TOPCon</strong></td><td>كفاءة مرتفعة جدًا</td></tr>
-                    <tr><td><strong>Bifacial</strong></td><td>إنتاج من الوجهين</td></tr>
-                    <tr><td><strong>Half Cell</strong></td><td>فاقد أقل وإنتاج أعلى</td></tr>
-                    <tr><td><strong>Multi Busbar (MBB)</strong></td><td>تحسين نقل التيار</td></tr>
-                    <tr><td><strong>ABC Cell</strong></td><td>أحدث تقنيات AIKO عالية الكفاءة</td></tr>
-                </tbody>
-            </table>
-        </div>
     </div>
 
-    <!-- القسم الثاني: الإنفرترات -->
-    <div id="pump-inverters" class="content-card">
-        <h3><i class="fa-solid fa-bolt"></i> إنفرترات الطلمبات والمحطات (Inverters)</h3>
-        <p>نوفر أقوى إنفرترات الطلمبات الزراعية ومحطات الـ On/Off Grid والمنازل بأعلى كفاءة واعتمادية في السوق المصري.</p>
-    </div>
-
-    <!-- القسم الثالث: جدول الطرمبات الغاطسة -->
-    <div id="pumps-section" class="content-card">
-        <h3><i class="fa-solid fa-water"></i> 4- جدول الطرمبات الغاطسة</h3>
+    <!-- القسم الثاني: الطرمبات الغاطسة -->
+    <div class="content-card">
+        <h3><i class="fa-solid fa-water"></i> 2. جدول الطرمبات الغاطسة (Submersible Pumps)</h3>
         <div class="table-responsive">
             <table>
                 <thead>
@@ -363,82 +293,67 @@
         </div>
     </div>
 
-    <!-- القسم الرابع: جدول الكابلات والمواسير -->
-    <div id="cables-pipes" class="content-card">
-        <h3><i class="fa-solid fa-network-wired"></i> 3 & 5 - جدول الكابلات والمواسير</h3>
-        
-        <h4 style="color: var(--primary-color); margin: 10px 0 5px 0; font-size: 14px;">3- جدول الكابلات:</h4>
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>النوع</th>
-                        <th>المقاس</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>كابل DC</td><td>1×4 مم²</td></tr>
-                    <tr><td>كابل DC</td><td>1×6 مم²</td></tr>
-                    <tr><td>كابل AC</td><td>3×4 مم²</td></tr>
-                    <tr><td>كابل AC</td><td>3×6 مم²</td></tr>
-                    <tr><td>كابل AC</td><td>3×10 مم²</td></tr>
-                    <tr><td>كابل AC</td><td>3×16 مم²</td></tr>
-                    <tr><td>كابل AC</td><td>3×25 مم²</td></tr>
-                    <tr><td>كابل AC</td><td>3×35 مم²</td></tr>
-                    <tr><td>كابل AC</td><td>3×50 مم²</td></tr>
-                    <tr><td>كابل AC</td><td>3×70 مم²</td></tr>
-                    <tr><td>كابل AC</td><td>3×95 مم²</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h4 style="color: var(--primary-color); margin: 20px 0 5px 0; font-size: 14px;">5- جدول المواسير:</h4>
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>النوع</th>
-                        <th>المقاس</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>بلاستيك هندي</td><td>2 بوصة</td></tr>
-                    <tr><td>بلاستيك هندي</td><td>3 بوصة</td></tr>
-                    <tr><td>بلاستيك هندي</td><td>4 بوصة</td></tr>
-                    <tr><td>بلاستيك هندي</td><td>5 بوصة</td></tr>
-                    <tr><td>بلاستيك هندي</td><td>6 بوصة</td></tr>
-                    <tr><td>بلاستيك عادى</td><td>2 بوصة</td></tr>
-                    <tr><td>بلاستيك عادى</td><td>3 بوصة</td></tr>
-                    <tr><td>بلاستيك عادى</td><td>4 بوصة</td></tr>
-                    <tr><td>حديد عادى</td><td>2 بوصة</td></tr>
-                    <tr><td>حديد عادى</td><td>3 بوصة</td></tr>
-                    <tr><td>حديد عادى</td><td>4 بوصة</td></tr>
-                    <tr><td>حديد عادى</td><td>5 بوصة</td></tr>
-                    <tr><td>حديد عادى</td><td>6 بوصة</td></tr>
-                    <tr><td>حديد مجلفن</td><td>2 بوصة</td></tr>
-                    <tr><td>حديد مجلفن</td><td>3 بوصة</td></tr>
-                    <tr><td>حديد مجلفن</td><td>4 بوصة</td></tr>
-                    <tr><td>حديد مجلفن</td><td>5 بوصة</td></tr>
-                    <tr><td>حديد مجلفن</td><td>6 بوصة</td></tr>
-                </tbody>
-            </table>
-        </div>
+    <!-- القسم الثالث: الكابلات ووصلاتها -->
+    <div class="content-card">
+        <h3><i class="fa-solid fa-network-wired"></i> 3. كابلات الطاقة الشمسية والغواطس ووصلاتها</h3>
+        <ul>
+            <li><strong>سادسًا: الكابل البحري الخاص بالغواطس:</strong> نوفر الكابل البحري الغاطس بجميع المقاسات (3×4، 3×6، 3×10، 3×16، 3×25، 3×35، 3×50 مم² وجميع المقاسات الأخرى) من ماركات تركية عالمية معتمدة: <strong>PAKTEL</strong> و <strong>SHARK</strong>.</li>
+            <li><strong>كابلات الطاقة الشمسية:</strong> DC Solar Cable و AC Power Cable وكابلات نحاس وتركية بجميع المقاسات.</li>
+            <li><strong>سابعًا: وصلات الكابلات:</strong> توفير جميع أنواع ومقاسات وصلات لحام كابلات <strong>Raychem</strong> الأصلية.</li>
+        </ul>
     </div>
 
-    <!-- القسم الخامس: عروض المنظومات المستعملة -->
+    <!-- القسم الرابع: مستلزمات الغواطس والآبار (Well Head Kit & حبل الحرير) -->
+    <div class="content-card">
+        <h3><i class="fa-solid fa-tools"></i> 4. مستلزمات الغواطس والآبار</h3>
+        <ul>
+            <li><strong>ثامنًا: طقم البئر (Well Head Kit):</strong> نوفر جميع مستلزمات تركيب الغواطس (غطاء البئر، قاعدة البئر، الجلب، المشابك، قواعد تثبيت المواسير، وقواعد تثبيت الكابلات).</li>
+            <li><strong>تاسعًا: حبل الحرير:</strong> حبل حرير (Nylon Safety Rope) عالي الجودة بجميع المقاسات، ومناسب لتعليق الغواطس داخل الآبار بأمان تام.</li>
+        </ul>
+    </div>
+
+    <!-- القسم الخامس: وحدات الحماية -->
+    <div class="content-card">
+        <h3><i class="fa-solid fa-shield-halved"></i> 5. وحدات الحماية الذكية</h3>
+        <p>نوفر جميع وحدات الحماية بجميع القدرات لضمان أمان المنظومة:</p>
+        <ul>
+            <li>حماية زيادة وانخفاض الجهد.</li>
+            <li>حماية فقد الفاز وزيادة التيار.</li>
+            <li>حماية الحمل الزائد للغواطس والطرمبات.</li>
+            <li>وحدات حماية ذكية متكاملة.</li>
+        </ul>
+    </div>
+
+    <!-- القسم السادس: المواسير والشاسيهات -->
+    <div class="content-card">
+        <h3><i class="fa-solid fa-bars-staggered"></i> 6. المواسير والشاسيهات</h3>
+        <ul>
+            <li><strong>المواسير:</strong> مواسير بلاستيك صناعة هندية (طول 3 متر - جميع المقاسات - جديد ومستعمل) + مواسير حديد مجلفن (أطوال 3 و 6 متر - جميع المقاسات - جديد ومستعمل).</li>
+            <li><strong>الشاسيهات:</strong> شاسيهات ثابتة ومتحركة من الحديد المجلفن عالي الجودة مع إمكانية التصنيع حسب الطلب بجميع المقاسات.</li>
+        </ul>
+    </div>
+
+    <!-- القسم السابع: أنظمة إنارة المنازل والمزارع -->
+    <div class="content-card">
+        <h3><i class="fa-solid fa-house-chimney-user"></i> 7. أنظمة إنارة المنازل والمزارع والمنشآت</h3>
+        <p>نقوم بتصميم وتوريد وتركيب وتشغيل وصيانة أنظمة الطاقة الشمسية الخاصة بـ:</p>
+        <p><strong>المنازل، المزارع، الفلل، الاستراحات، المخازن، المحلات التجارية، المصانع، والمنشآت الصناعية.</strong></p>
+        <p style="margin-top: 8px; color: var(--primary-color); font-weight: bold;">⚡ القدرات: من 1 كيلووات وحتى 100 كيلووات فأكثر حسب احتياجات العميل.</p>
+    </div>
+
+    <!-- القسم الثامن: عروض المنظومات المستعملة -->
     <div id="used-systems" class="used-system-box">
         <h3><i class="fa-solid fa-tags"></i> عروض خاصة: منظومات طاقة شمسية مستعملة للبيع</h3>
         
         <!-- منظومة 50 كيلو -->
         <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
             <h4 style="color: var(--accent-color); margin-bottom: 8px;">🔹 منظومة طاقة شمسية مستعملة (50 كيلو وات)</h4>
-            <p style="font-size: 12px; margin-bottom: 8px; color: #d1e7dd;">حالة المنظومة: مستعملة – تعمل بكفاءة ممتازة وجاهزة للتشغيل الفوري.</p>
             <table>
                 <tr><td><strong>القدرة الإجمالية</strong></td><td>50 كيلو وات</td></tr>
                 <tr><td><strong>الألواح الشمسية</strong></td><td>152 لوح ZYTECH (قدرة اللوح 330 وات)</td></tr>
                 <tr><td><strong>الإنفرتر</strong></td><td>انفرتر FRECON بقدرة 50 كيلو وات</td></tr>
                 <tr><td><strong>الغاطس والطرمبة</strong></td><td>تركي استانلس ستيل بقدرة 50 كيلو وات</td></tr>
-                <tr><td><strong>الحماية والمواسير</strong></td><td>وحدة حماية كاملة + 35 ماسورة حديد (إجمالي 105 متر)</td></tr>
+                <tr><td><strong>الحماية والمواسير</strong></td><td>وحدة حماية كاملة + 35 ماسورة حديد (105 متر)</td></tr>
                 <tr><td><strong>الكابلات والشاسيه</strong></td><td>كابل تركي 3×25 مم² بطول 125 متر + شاسيه ثابت مجلفن</td></tr>
             </table>
         </div>
@@ -446,22 +361,35 @@
         <!-- منظومة 12 كيلو -->
         <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px;">
             <h4 style="color: var(--accent-color); margin-bottom: 8px;">🔹 منظومة طاقة شمسية مستعملة (12 كيلو وات / 15 حصان)</h4>
-            <p style="font-size: 12px; margin-bottom: 8px; color: #d1e7dd;">حالة المنظومة: مستعملة – تعمل بكفاءة ممتازة حتى الآن.</p>
             <table>
                 <tr><td><strong>القدرة الإجمالية</strong></td><td>12 كيلو وات (15 حصان)</td></tr>
-                <tr><td><strong>الألواح الشمسية</strong></td><td>36 لوح ZNSHINE SOLAR (قدرة اللوح 330 وات)</td></tr>
-                <tr><td><strong>الإنفرتر</strong></td><td>انفرتر INVT عالي الاعتمادية بقدرة 12 كيلو</td></tr>
-                <tr><td><strong>الغاطس والتوربينة</strong></td><td>تركي استانلس ستيل (8 مراحل) بقدرة 12 كيلو</td></tr>
-                <tr><td><strong>المواسير والكابلات</strong></td><td>18 ماسورة بلاستيك هندي (54 متر) + كابل تركي 3×25 مم² بطول 65 متر</td></tr>
+                <tr><td><strong>الألواح الشمسية</strong></td><td>36 لوح ZNSHINE SOLAR (330 وات)</td></tr>
+                <tr><td><strong>الإنفرتر والغاطس</strong></td><td>انفرتر INVT + غاطس تركي استانلس (8 مراحل) 12 كيلو</td></tr>
+                <tr><td><strong>المواسير والكابلات</strong></td><td>18 ماسورة بلاستيك هندي (54 متر) + كابل تركي 3×25 مم² (65 متر)</td></tr>
                 <tr><td><strong>الشاسيه</strong></td><td>حديد محمل ثابت عالي المتانة</td></tr>
             </table>
         </div>
-        
-        <p style="font-size: 12px; color: var(--accent-color); margin-top: 12px; text-align: center;">🔹 المعاينة متاحة على أرض الواقع مع إمكانية التشغيل الكامل أمام المشتري قبل الشراء.</p>
+        <p style="font-size: 12px; color: var(--accent-color); margin-top: 12px; text-align: center;">🔹 المعاينة متاحة على أرض الواقع مع إمكانية التشغيل الكامل أمام المشتري.</p>
+    </div>
+
+    <!-- القسم التاسع: لماذا منتجاتنا؟ -->
+    <div class="content-card">
+        <h3><i class="fa-solid fa-award"></i> لماذا منتجاتنا؟</h3>
+        <div class="features-grid">
+            <div class="feature-item">منتجات أصلية</div>
+            <div class="feature-item">ضمان معتمد</div>
+            <div class="feature-item">أسعار تنافسية</div>
+            <div class="feature-item">جميع القدرات</div>
+            <div class="feature-item">ماركات عالمية</div>
+            <div class="feature-item">جديد ومستعمل</div>
+            <div class="feature-item">خدمة ما بعد البيع</div>
+            <div class="feature-item">دعم فني واستشارات</div>
+        </div>
+        <p style="text-align: center; margin-top: 12px; font-size: 13px; font-weight: bold; color: var(--primary-color);">تنفيذ وتركيب في جميع أنحاء جمهورية مصر العربية 🇪🇬</p>
     </div>
 
     <!-- تواصل معنا -->
-    <div id="contact-us" class="contact-card">
+    <div class="contact-card">
         <h3><i class="fa-solid fa-phone"></i> تواصل معنا الآن</h3>
         <p><i class="fa-solid fa-location-dot"></i> <strong>المقر الرئيسي:</strong> محافظة الجيزة – شارع الثلاثيني – متفرع من شارع ترعة الزمر.</p>
         <p><i class="fa-brands fa-whatsapp"></i> <strong>واتساب:</strong> <a href="https://wa.me/201029394526" target="_blank">01029394526</a></p>

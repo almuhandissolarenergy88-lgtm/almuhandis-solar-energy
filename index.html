@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AL-MUHANDIS SOLAR ENERGY - م / أحمد خطرى حامد</title>
-    <!-- مكتبة الأيقونات والخطوط -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -19,7 +18,6 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--bg-color); color: var(--text-color); direction: rtl; text-align: right; padding-bottom: 70px; }
         
-        /* الشريط المتحرك العلوي */
         .marquee-container {
             background: linear-gradient(90deg, #021b12, #043825, #072644);
             color: var(--accent-yellow);
@@ -47,7 +45,6 @@
             100% { transform: translateX(100%); }
         }
 
-        /* شريط معلومات الذكاء الاصطناعي والوقت */
         .ai-top-bar {
             background: var(--primary-dark);
             color: var(--white);
@@ -73,7 +70,6 @@
         }
         .ai-info-group { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
 
-        /* الشريط العلوي (Navbar) */
         .navbar {
             background-color: var(--primary-green);
             color: var(--white);
@@ -126,7 +122,6 @@
             gap: 6px;
         }
 
-        /* قسم الهيرو (Hero Section) */
         .hero-section {
             background: linear-gradient(rgba(2, 12, 8, 0.95), rgba(4, 56, 37, 0.95)), center center/cover;
             color: var(--white);
@@ -174,6 +169,51 @@
             flex-wrap: wrap;
         }
 
+        /* شبكة الأيقونات التفاعلية الرئيسية */
+        .main-icons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        .icon-card {
+            background: var(--white);
+            border: 2px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 20px 10px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--primary-green);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .icon-card i {
+            font-size: 32px;
+            color: var(--accent-gold);
+        }
+        .icon-card span {
+            font-size: 13px;
+            font-weight: bold;
+            color: var(--primary-dark);
+        }
+        .icon-card:hover {
+            border-color: var(--accent-gold);
+            background: #f0fdf4;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        .icon-card.special-highlight {
+            background: linear-gradient(135deg, #043825, #021b12);
+            border: 2px solid var(--accent-gold);
+        }
+        .icon-card.special-highlight i, .icon-card.special-highlight span {
+            color: var(--accent-yellow);
+        }
+
         .container { max-width: 1150px; margin: 25px auto; padding: 0 15px; }
         
         .section-box {
@@ -201,7 +241,6 @@
             margin-bottom: 10px;
         }
 
-        /* تنسيق الجداول الاحترافية */
         .table-responsive {
             width: 100%;
             overflow-x: auto;
@@ -233,42 +272,6 @@
         .data-table tr:nth-child(even) { background-color: #f8fafc; }
         .data-table tr:hover { background-color: #f1f5f9; }
 
-        /* شبكة الخدمات ولماذا نحن */
-        .services-grid, .why-us-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 12px;
-            margin-top: 15px;
-        }
-        .service-item {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-right: 4px solid var(--primary-green);
-            padding: 12px 15px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            color: #1e293b;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .service-item i { color: var(--accent-gold); font-size: 15px; }
-
-        .why-item {
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
-            padding: 10px 14px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: bold;
-            color: #166534;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* بطاقة تواصل معنا المميزة */
         .contact-card-box {
             background: linear-gradient(135deg, #043825, #021b12);
             color: var(--white);
@@ -312,7 +315,6 @@
         }
         .contact-item a:hover { text-decoration: underline; }
 
-        /* بطاقة العرض المميز (محطة 50 كيلو) */
         .offer-card {
             background: linear-gradient(135deg, #043825, #021b12);
             color: var(--white);
@@ -322,27 +324,7 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
         .offer-card h3 { color: var(--accent-yellow); border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px; margin-bottom: 15px; }
-        
-        .brands-category { margin-bottom: 20px; }
-        .brands-category h4 {
-            font-size: 15px;
-            color: var(--primary-green);
-            margin-bottom: 10px;
-            border-right: 3px solid var(--accent-gold);
-            padding-right: 8px;
-        }
-        .brands-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-        .brand-badge {
-            background: #f1f5f9;
-            color: var(--primary-green);
-            padding: 6px 14px;
-            border-radius: 6px;
-            font-weight: 800;
-            font-size: 13px;
-            border: 1px solid #cbd5e1;
-        }
 
-        /* الفوتر */
         .footer-bottom {
             background-color: var(--primary-dark);
             color: var(--white);
@@ -368,7 +350,6 @@
             font-size: 13px;
         }
 
-        /* الأزرار العائمة */
         .floating-buttons {
             position: fixed;
             bottom: 20px;
@@ -396,7 +377,6 @@
 </head>
 <body>
 
-    <!-- الشريط المتحرك العلوي -->
     <div class="marquee-container">
         <div class="marquee-content">
             <span><i class="fa-solid fa-star" style="color: var(--accent-gold);"></i> إشراف هندسي: المهندس / أحمد خطرى حامد (Ahmed Khotary)</span>
@@ -406,7 +386,6 @@
         </div>
     </div>
 
-    <!-- شريط معلومات الذكاء الاصطناعي والوقت -->
     <div class="ai-top-bar">
         <div class="ai-badge">
             <i class="fa-solid fa-wand-magic-sparkles"></i> AI Smart Active System
@@ -418,22 +397,24 @@
         </div>
     </div>
 
-    <!-- الشريط العلوي (Navbar) -->
     <nav class="navbar">
         <a href="#" class="nav-logo"><i class="fa-solid fa-solar-panel"></i> AL-MUHANDIS SOLAR ENERGY</a>
         <ul class="nav-links">
             <li><a href="#" class="active"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
-            <li><a href="#about">من نحن</a></li>
+            <li><a href="#used-system">المحطات المستعملة</a></li>
             <li><a href="#panels">الألواح</a></li>
-            <li><a href="#pump-inverters">إنفرترات الطلمبات</a></li>
-            <li><a href="#used-system">العروض المستعملة</a></li>
-            <li><a href="#appliances">الأجهزة</a></li>
+            <li><a href="#pump-inverters">الإنفرترات الزراعية</a></li>
+            <li><a href="#ongrid-inverters">إنفرترات On-Grid</a></li>
+            <li><a href="#batteries">البطاريات</a></li>
+            <li><a href="#pumps">الطرمبات الغاطسة</a></li>
+            <li><a href="#structures">الشاسيهات</a></li>
+            <li><a href="#pipes">المواسير</a></li>
+            <li><a href="#cables">الكابلات</a></li>
             <li><a href="#contact-section">تواصل معنا</a></li>
         </ul>
         <a href="https://wa.me/201029394526" class="nav-phone"><i class="fa-brands fa-whatsapp"></i> 01029394526</a>
     </nav>
 
-    <!-- قسم الهيرو الرئيسي الفخم -->
     <header class="hero-section">
         <h1 class="hero-title">AL-MUHANDIS SOLAR ENERGY</h1>
         <h2 class="hero-subtitle">Powering the Future with Solar Energy</h2>
@@ -451,259 +432,57 @@
 
     <div class="container">
 
-        <!-- من نحن -->
-        <div class="section-box" id="about">
-            <h3><i class="fa-solid fa-circle-info"></i> من نحن (About Us)</h3>
-            <p>مرحبًا بكم في <b>AL-MUHANDIS SOLAR ENERGY</b>.</p>
-            <p>نحن شركة متخصصة في تصميم وتوريد وتركيب وتشغيل وصيانة جميع أنظمة الطاقة الشمسية، ونوفر جميع مستلزمات الطاقة الشمسية للمنازل والمزارع والمصانع والآبار والمنشآت التجارية والصناعية.</p>
-            <p>كما نعمل في بيع وشراء محطات الطاقة الشمسية الجديدة والمستعملة، ونوفر حلولًا متكاملة تناسب جميع الاحتياجات والميزانيات مع الالتزام بأعلى معايير الجودة والكفاءة.</p>
-            <p>نسعى دائمًا إلى تقديم أفضل المنتجات العالمية بأفضل الأسعار، مع توفير خدمات الضمان وخدمة ما بعد البيع والدعم الفني المستمر.</p>
-        </div>
-
-        <!-- القسم الأول: جدول الألواح الشمسية -->
-        <div class="section-box" id="panels">
-            <h3><i class="fa-solid fa-solar-panel"></i> جدول الألواح الشمسية (Solar Panels)</h3>
-            <p>مواصفات وقدرات أشهر الماركات العالمية المعتمدة للألواح الشمسية:</p>
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>الشركة</th>
-                            <th>بلد المنشأ</th>
-                            <th>نوع الخلايا</th>
-                            <th>التكنولوجيا</th>
-                            <th>القدرات المتوفرة (وات)</th>
-                            <th>الاستخدام</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><b>Jinko Solar</b></td>
-                            <td>الصين</td>
-                            <td>Mono</td>
-                            <td>PERC / N-Type / TOPCon / Bifacial</td>
-                            <td>330 - 400 - 450 - 540 - 550 - 570 - 580 - 605 - 620 - 630 - 640 - 700 - 720</td>
-                            <td>محطات منزلية - تجارية - زراعية</td>
-                        </tr>
-                        <tr>
-                            <td><b>Trina Solar</b></td>
-                            <td>الصين</td>
-                            <td>Mono</td>
-                            <td>PERC / N-Type / TOPCon</td>
-                            <td>330 - 400 - 450 - 530 - 540 - 550 - 580 - 620 - 670 - 700 - 720</td>
-                            <td>جميع الاستخدامات</td>
-                        </tr>
-                        <tr>
-                            <td><b>JA Solar</b></td>
-                            <td>الصين</td>
-                            <td>Mono</td>
-                            <td>PERC / Deep Blue / TOPCon</td>
-                            <td>330 - 400 - 450 - 540 - 550 - 565 - 580 - 605 - 620 - 650</td>
-                            <td>جميع الاستخدامات</td>
-                        </tr>
-                        <tr>
-                            <td><b>LONGi Solar</b></td>
-                            <td>الصين</td>
-                            <td>Mono</td>
-                            <td>Hi-MO / TOPCon</td>
-                            <td>330 - 400 - 450 - 540 - 550 - 580 - 600 - 620 - 650</td>
-                            <td>منازل - مصانع - مزارع</td>
-                        </tr>
-                        <tr>
-                            <td><b>Canadian Solar</b></td>
-                            <td>كندا / الصين</td>
-                            <td>Mono</td>
-                            <td>PERC / TOPCon</td>
-                            <td>330 - 400 - 450 - 540 - 550 - 600 - 660 - 700</td>
-                            <td>جميع الاستخدامات</td>
-                        </tr>
-                        <tr>
-                            <td><b>Risen Energy</b></td>
-                            <td>الصين</td>
-                            <td>Mono</td>
-                            <td>PERC / TOPCon</td>
-                            <td>400 - 450 - 540 - 550 - 570 - 600 - 650 - 700</td>
-                            <td>محطات الطاقة</td>
-                        </tr>
-                        <tr>
-                            <td><b>TW Solar</b></td>
-                            <td>الصين</td>
-                            <td>Mono</td>
-                            <td>TOPCon</td>
-                            <td>540 - 550 - 580 - 600 - 620 - 650 - 700 - 720</td>
-                            <td>محطات كبيرة</td>
-                        </tr>
-                        <tr>
-                            <td><b>Astronergy</b></td>
-                            <td>الصين</td>
-                            <td>Mono</td>
-                            <td>TOPCon</td>
-                            <td>540 - 550 - 570 - 600 - 620 - 650 - 700</td>
-                            <td>محطات زراعية</td>
-                        </tr>
-                        <tr>
-                            <td><b>AIKO Solar</b></td>
-                            <td>الصين</td>
-                            <td>ABC Cell</td>
-                            <td>N-Type ABC</td>
-                            <td>440 - 450 - 460 - 600 - 610 - 620 - 650 - 670</td>
-                            <td>أعلى كفاءة</td>
-                        </tr>
-                        <tr>
-                            <td><b>GCL Solar</b></td>
-                            <td>الصين</td>
-                            <td>Mono</td>
-                            <td>TOPCon</td>
-                            <td>540 - 550 - 570 - 600 - 610 - 620</td>
-                            <td>محطات متوسطة وكبيرة</td>
-                        </tr>
-                        <tr>
-                            <td><b>Ulica Solar</b></td>
-                            <td>الصين</td>
-                            <td>Mono</td>
-                            <td>PERC / TOPCon</td>
-                            <td>450 - 540 - 550 - 570 - 600 - 620</td>
-                            <td>الاستخدام العام</td>
-                        </tr>
-                        <tr>
-                            <td><b>ZNShine Solar</b></td>
-                            <td>الصين</td>
-                            <td>Mono</td>
-                            <td>TOPCon</td>
-                            <td>450 - 540 - 550 - 570 - 600 - 620</td>
-                            <td>الاستخدام العام</td>
-                        </tr>
-                        <tr>
-                            <td><b>Suntech Solar</b></td>
-                            <td>الصين</td>
-                            <td>Mono</td>
-                            <td>PERC</td>
-                            <td>330 - 400 - 450 - 540 - 550 - 580</td>
-                            <td>الاستخدام العام</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- شبكة الأيقونات التفاعلية السريعة -->
+        <div class="section-box">
+            <h3><i class="fa-solid fa-th"></i> أقسام المنتجات والخدمات (اختر قسماً للتصفح السريع)</h3>
+            <div class="main-icons-grid">
+                <a href="#used-system" class="icon-card special-highlight">
+                    <i class="fa-solid fa-tags"></i>
+                    <span>المحطات المستعملة</span>
+                </a>
+                <a href="#panels" class="icon-card">
+                    <i class="fa-solid fa-solar-panel"></i>
+                    <span>الألواح الشمسية</span>
+                </a>
+                <a href="#pump-inverters" class="icon-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>الإنفرترات الزراعية</span>
+                </a>
+                <a href="#ongrid-inverters" class="icon-card">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <span>إنفرترات On-Grid</span>
+                </a>
+                <a href="#batteries" class="icon-card">
+                    <i class="fa-solid fa-car-battery"></i>
+                    <span>البطاريات</span>
+                </a>
+                <a href="#pumps" class="icon-card">
+                    <i class="fa-solid fa-water"></i>
+                    <span>الطرمبات الغاطسة</span>
+                </a>
+                <a href="#structures" class="icon-card">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <span>الشاسيهات والهياكل</span>
+                </a>
+                <a href="#pipes" class="icon-card">
+                    <i class="fa-solid fa-pipe"></i>
+                    <span>المواسير</span>
+                </a>
+                <a href="#cables" class="icon-card">
+                    <i class="fa-solid fa-plug"></i>
+                    <span>الكابلات</span>
+                </a>
+                <a href="#contact-section" class="icon-card">
+                    <i class="fa-solid fa-headset"></i>
+                    <span>تواصل معنا</span>
+                </a>
             </div>
         </div>
 
-        <!-- القسم الثاني: جدول إنفرترات الطلمبات الشمسية -->
-        <div class="section-box" id="pump-inverters">
-            <h3><i class="fa-solid fa-bolt"></i> جدول إنفرترات الطلمبات الشمسية (Solar Pump Inverters)</h3>
-            <p>أفضل محولات وموثقات تشغيل طلمبات الآبار والزراعة بالطاقة الشمسية:</p>
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>الشركة</th>
-                            <th>بلد المنشأ</th>
-                            <th>النوع</th>
-                            <th>القدرات (KW)</th>
-                            <th>ما يعادلها (حصان)</th>
-                            <th>جهد التشغيل</th>
-                            <th>الفازات</th>
-                            <th>الاستخدام</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><b>FRECON</b></td>
-                            <td>الصين</td>
-                            <td>Solar Pump</td>
-                            <td>0.75 حتى 400 KW</td>
-                            <td>1 حتى 500 حصان</td>
-                            <td>220V / 380V</td>
-                            <td>أحادي / ثلاثي</td>
-                            <td>تشغيل الطلمبات بالطاقة الشمسية</td>
-                        </tr>
-                        <tr>
-                            <td><b>INVT</b></td>
-                            <td>الصين</td>
-                            <td>Solar Pump</td>
-                            <td>0.75 حتى 400 KW</td>
-                            <td>نفس القدرات بالحصان</td>
-                            <td>220V / 380V</td>
-                            <td>أحادي / ثلاثي</td>
-                            <td>الآبار والري</td>
-                        </tr>
-                        <tr>
-                            <td><b>VEICHI</b></td>
-                            <td>الصين</td>
-                            <td>Solar Pump</td>
-                            <td>0.75 حتى 200 KW</td>
-                            <td>حتى 250 حصان</td>
-                            <td>220V / 380V</td>
-                            <td>أحادي / ثلاثي</td>
-                            <td>جميع أنظمة الري</td>
-                        </tr>
-                        <tr>
-                            <td><b>SAJ</b></td>
-                            <td>الصين</td>
-                            <td>Solar Pump</td>
-                            <td>2.2 حتى 75 KW</td>
-                            <td>حتى 100 حصان</td>
-                            <td>380V</td>
-                            <td>ثلاثي</td>
-                            <td>الطلمبات الغاطسة</td>
-                        </tr>
-                        <tr>
-                            <td><b>KEWO</b></td>
-                            <td>الصين</td>
-                            <td>Solar Pump</td>
-                            <td>1.5 حتى 55 KW</td>
-                            <td>حتى 75 حصان</td>
-                            <td>220V / 380V</td>
-                            <td>أحادي / ثلاثي</td>
-                            <td>الزراعة</td>
-                        </tr>
-                        <tr>
-                            <td><b>DELIXI</b></td>
-                            <td>الصين</td>
-                            <td>Solar Pump</td>
-                            <td>2.2 حتى 110 KW</td>
-                            <td>حتى 150 حصان</td>
-                            <td>380V</td>
-                            <td>ثلاثي</td>
-                            <td>الآبار العميقة</td>
-                        </tr>
-                        <tr>
-                            <td><b>USFULL</b></td>
-                            <td>الصين</td>
-                            <td>Solar Pump</td>
-                            <td>0.75 حتى 37 KW</td>
-                            <td>حتى 50 حصان</td>
-                            <td>220V / 380V</td>
-                            <td>أحادي / ثلاثي</td>
-                            <td>الري</td>
-                        </tr>
-                        <tr>
-                            <td><b>MICNO</b></td>
-                            <td>الصين</td>
-                            <td>Solar Pump</td>
-                            <td>2.2 حتى 75 KW</td>
-                            <td>حتى 100 حصان</td>
-                            <td>380V</td>
-                            <td>ثلاثي</td>
-                            <td>المزارع</td>
-                        </tr>
-                        <tr>
-                            <td><b>HPMONT</b></td>
-                            <td>الصين</td>
-                            <td>Solar Pump</td>
-                            <td>2.2 حتى 110 KW</td>
-                            <td>حتى 150 حصان</td>
-                            <td>380V</td>
-                            <td>ثلاثي</td>
-                            <td>التطبيقات الصناعية والزراعية</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- عرض منظومة طاقة شمسية مستعملة للبيع -->
+        <!-- القسم الأهم: المحطات المستعملة -->
         <div class="section-box offer-card" id="used-system">
-            <h3><i class="fa-solid fa-tags"></i> عرض خاص: منظومة طاقة شمسية مستعملة للبيع (50 كيلو وات)</h3>
-            <p style="color: #e2e8f0; margin-bottom: 15px;">حالة المنظومة: مستعملة – تعمل بكفاءة ممتازة وجاهزة للتشغيل الفوري مع إمكانية المعاينة والتشغيل أمام المشتري.</p>
+            <h3><i class="fa-solid fa-tags"></i> قسم المحطات المستعملة (القسم الرئيسي والأهم)</h3>
+            <p style="color: #e2e8f0; margin-bottom: 15px;">نوفر ونشتري ونبيع أفضل المحطات المستعملة والجديدة بكفاءة تامة ومعاينة أمام المشتري.</p>
             <div class="table-responsive">
                 <table class="data-table" style="color: #1e293b;">
                     <thead>
@@ -713,8 +492,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td><b>قدرة المنظومة</b></td><td>50 كيلو وات</td></tr>
-                        <tr><td><b>نوع الألواح الشمسية</b></td><td>ZYTECH</td></tr>
+                        <tr><td><b>قدرة المنظومة المتاحة</b></td><td>50 كيلو وات (أو حسب الطلب محطات مختلفة)</td></tr>
+                        <tr><td><b>نوع الألواح الشمسية</b></td><td>ZYTECH وغيرها من الماركات المعتمدة</td></tr>
                         <tr><td><b>قدرة اللوح / العدد</b></td><td>330 وات (عدد 152 لوح بإجمالي تقريبي 50.16 كيلو وات)</td></tr>
                         <tr><td><b>نوع وجهد الإنفرتر</b></td><td>FRECON بقدرة 50 كيلو وات</td></tr>
                         <tr><td><b>وحدة الحماية</b></td><td>وحدة حماية كهربائية كاملة للحماية من الأعطال وتقلبات الجهد</td></tr>
@@ -727,45 +506,141 @@
             </div>
         </div>
 
-        <!-- القسم: الأجهزة الكهربائية التي تعمل بالطاقة الشمسية -->
-        <div class="section-box" id="appliances">
-            <h3><i class="fa-solid fa-plug"></i> الأجهزة الكهربائية التي تعمل بالطاقة الشمسية</h3>
+        <!-- القسم الأول: الألواح الشمسية -->
+        <div class="section-box" id="panels">
+            <h3><i class="fa-solid fa-solar-panel"></i> القسم الأول: الألواح الشمسية (Solar Panels)</h3>
+            <p>أبرز الشركات العالمية المعتمدة (Jinko, Trina, JA Solar, LONGi, Risen, TW Solar, AIKO, GCL, Astronergy, Canadian Solar, ZNShine, Jet Solar, Ulica, Quantum, Eco Green, Gokin):</p>
             <div class="table-responsive">
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>الجهاز</th>
-                            <th>الأنواع والمواصفات</th>
+                            <th>الشركة</th>
+                            <th>بلد المنشأ</th>
+                            <th>نوع الخلايا والتكنولوجيا</th>
+                            <th>القدرات المتاحة (وات)</th>
+                            <th>الكفاءة</th>
+                            <th>الضمان</th>
                             <th>الاستخدام</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td><b>كاميرات مراقبة شمسية</b></td><td>WiFi - 4G - PTZ - ثابتة - متحركة</td><td>المنازل - المزارع - المصانع</td></tr>
-                        <tr><td><b>أجهزة تسجيل NVR</b></td><td>4 - 8 - 16 - 32 قناة</td><td>أنظمة المراقبة</td></tr>
-                        <tr><td><b>لمبات وكشافات إنارة شمسية</b></td><td>50W حتى 600W / LED الشوارع</td><td>الشوارع - الحدائق - المنازل</td></tr>
-                        <tr><td><b>أعمدة إنارة شمسية</b></td><td>4 - 6 - 8 - 10 - 12 متر</td><td>الطرق والمزارع</td></tr>
-                        <tr><td><b>مراوح ومبردات صحراوية</b></td><td>سقف - حائط - مكتب / أحجام مختلفة</td><td>المنازل والمزارع والمخازن</td></tr>
-                        <tr><td><b>ثلاجات وديب فريزر</b></td><td>منزلية - طبية / أفقي ورأسي</td><td>المنازل والعيادات والمتاجر</td></tr>
-                        <tr><td><b>تكييفات شمسية</b></td><td>1.5 - 2.25 - 3 - 5 حصان</td><td>المنازل والشركات</td></tr>
-                        <tr><td><b>مضخات مياه سطحية وغاطسة</b></td><td>AC / DC للآبار والري</td><td>الزراعة ونقل المياه</td></tr>
-                        <tr><td><b>سخانات مياه شمسية</b></td><td>100 - 150 - 200 - 300 لتر</td><td>المنازل والفنادق</td></tr>
-                        <tr><td><b>محطات طاقة متنقلة (Power Station)</b></td><td>سعات مختلفة / مولدات محمولة</td><td>الطوارئ والتخييم والاستخدام المتنقل</td></tr>
-                        <tr><td><b>شواحن سيارات كهربائية</b></td><td>AC / DC</td><td>المنازل والشركات</td></tr>
-                        <tr><td><b>أنظمة حماية وأمان بوابات</b></td><td>راوتر إنترنت - أجهزة إنذار - بوابات وأسوار كهربائية شمسية</td><td>حماية المزارع والفلل</td></tr>
+                        <tr><td><b>Jinko Solar</b></td><td>الصين</td><td>Mono / TOPCon / Bifacial</td><td>330W حتى 720W</td><td>عالية جداً</td><td>25 سنة</td><td>محطات منزلية وزراعية</td></tr>
+                        <tr><td><b>Trina Solar</b></td><td>الصين</td><td>Mono / TOPCon</td><td>330W حتى 720W</td><td>عالية</td><td>25 سنة</td><td>جميع الاستخدامات</td></tr>
+                        <tr><td><b>JA Solar</b></td><td>الصين</td><td>Mono / TOPCon</td><td>330W حتى 650W</td><td>عالية</td><td>25 سنة</td><td>جميع الاستخدامات</td></tr>
+                        <tr><td><b>LONGi Solar</b></td><td>الصين</td><td>Hi-MO / TOPCon</td><td>330W حتى 650W</td><td>ممتازة</td><td>25 سنة</td><td>منازل ومصانع ومزارع</td></tr>
+                        <tr><td><b>Canadian Solar</b></td><td>كندا / الصين</td><td>PERC / TOPCon</td><td>330W حتى 700W</td><td>عالية</td><td>25 سنة</td><td>جميع الاستخدامات</td></tr>
+                        <tr><td><b>AIKO Solar</b></td><td>الصين</td><td>N-Type ABC</td><td>440W حتى 670W</td><td>الأعلى عالمياً</td><td>25 سنة</td><td>أعلى كفاءة مطلوبة</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- قسم المواسير والكابلات والمواصفات الإضافية -->
-        <div class="section-box" id="accessories">
-            <h3><i class="fa-solid fa-toolbox"></i> المواسير والكابلات وشاسيهات التركيب</h3>
-            <p><b>المواسير المتاحة:</b> بلاستيك هندى وعادى (2 إلى 6 بوصة) - حديد عادى ومجلفن (2 إلى 8 بوصة) - UPVC - HDPE.</p>
-            <p><b>الكابلات المتاحة:</b> كابلات DC و AC (نحاس وألومنيوم) بمقاسات تبدأ من 4 مم² وحتى 150 مم² (4 - 6 - 10 - 16 - 25 - 35 - 50 - 70 - 95 - 120 - 150 مم²).</p>
-            <p><b>الشاسيهات:</b> ثابتة - متحركة يدويًا - متحركة أوتوماتيك (Single Axis & Dual Axis) مجلفنة بالغمس الساخن مع مسامير استنلس مقاومة للرياح.</p>
+        <!-- القسم الثاني: الإنفرترات الزراعية -->
+        <div class="section-box" id="pump-inverters">
+            <h3><i class="fa-solid fa-bolt"></i> القسم الثاني: الإنفرترات الزراعية (Solar Pump Inverters)</h3>
+            <p>تشمل شركات: FRECON, INVT, VEICHI, DELIXI, KEWO, SAJ, TPS, VACON, USFULL, KEVAN, Dolycon, Micno, Quantum Solar.</p>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>الشركة</th>
+                            <th>بلد المنشأ</th>
+                            <th>القدرات (KW)</th>
+                            <th>ما يعادلها (حصان)</th>
+                            <th>جهد التشغيل والفازات</th>
+                            <th>درجة الحماية</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><b>FRECON</b></td><td>الصين</td><td>2.2 حتى 400 KW</td><td>3 حتى 500 حصان</td><td>220V / 380V (أحادي/ثلاثي)</td><td>IP65</td></tr>
+                        <tr><td><b>INVT</b></td><td>الصين</td><td>2.2 حتى 400 KW</td><td>3 حتى 500 حصان</td><td>380V ثلاثي</td><td>IP54 / IP65</td></tr>
+                        <tr><td><b>VEICHI</b></td><td>الصين</td><td>2.2 حتى 200 KW</td><td>3 حتى 250 حصان</td><td>220V / 380V</td><td>IP54</td></tr>
+                        <tr><td><b>DELIXI</b></td><td>الصين</td><td>2.2 حتى 110 KW</td><td>3 حتى 150 حصان</td><td>380V ثلاثي</td><td>IP54</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
-        <!-- قسم تواصل معنا المخصص -->
+        <!-- القسم الثالث: إنفرترات On Grid -->
+        <div class="section-box" id="ongrid-inverters">
+            <h3><i class="fa-solid fa-network-wired"></i> القسم الثالث: إنفرترات On Grid</h3>
+            <p>يشمل أشهر الماركات العالمية (Huawei, Solis, Sineng, Growatt, Sungrow, Deye, GoodWe, Sofar, Solinteg):</p>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>الشركة</th>
+                            <th>القدرات المتوفرة</th>
+                            <th>عدد MPPT</th>
+                            <th>الكفاءة</th>
+                            <th>نوع الشبكة</th>
+                            <th>الضمان</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><b>Huawei</b></td><td>3KW حتى 300KW</td><td>متعدد</td><td>98.6%</td><td>On-Grid / Commercial</td><td>5-10 سنوات</td></tr>
+                        <tr><td><b>Growatt</b></td><td>3KW حتى 250KW</td><td>متعدد</td><td>98.4%</td><td>On-Grid / Hybrid</td><td>5-10 سنوات</td></tr>
+                        <tr><td><b>Deye</b></td><td>5KW حتى 100KW</td><td>متعدد</td><td>97.6%</td><td>Hybrid / On-Grid</td><td>5-10 سنوات</td></tr>
+                        <tr><td><b>Sungrow</b></td><td>5KW حتى 350KW</td><td>متعدد</td><td>98.7%</td><td>Commercial / Utility</td><td>5-10 سنوات</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- القسم الرابع والخامس: البطاريات (GEL & Lithium) -->
+        <div class="section-box" id="batteries">
+            <h3><i class="fa-solid fa-car-battery"></i> القسم الرابع والخامس: البطاريات (GEL & Lithium)</h3>
+            <p><b>بطاريات GEL (مثل NPP, VEICHI, JYC):</b> متوفرة بسعات 12V-100Ah و 12V-150Ah و 12V-200Ah بعمر افتراضي طويل ودورات شحن عالية.</p>
+            <p><b>بطاريات الليثيوم LiFePO4 (مثل Dyness, Felicity, MUST, Magic Energy, Eastman, Top Power, CEEG, Quantum, ICell):</b> متوفرة بجهد 12V, 24V, 48V وسعات 100Ah, 200Ah, 230Ah, 280Ah, 300Ah, 320Ah مزودة بنظام حماية ذكي BMS ودورات شحن فائقة.</p>
+        </div>
+
+        <!-- القسم السادس: الطرمبات الغاطسة -->
+        <div class="section-box" id="pumps">
+            <h3><i class="fa-solid fa-water"></i> القسم السادس: الطرمبات الغاطسة (Submersible Pumps)</h3>
+            <p>ماركات هندية، صينية، وإيطالية ودنماركية (CRI, TEXMO, KSB, Kirloskar, Shakti, LEO, Shimge, CNP, Dongyin, Ebara, Lowara, Grundfos):</p>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>الشركة المصنعة</th>
+                            <th>بلد المنشأ</th>
+                            <th>الخامة</th>
+                            <th>مقاس الطرمبة</th>
+                            <th>القدرات المتاحة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><b>CRI / Shakti / Texmo</b></td><td>هندى</td><td>استانلس / حديد</td><td>4 و 6 و 8 بوصة</td><td>0.5 حصان حتى 100 حصان</td></tr>
+                        <tr><td><b>LEO / Shimge / Dongyin</b></td><td>صينى</td><td>استانلس ستيل</td><td>4 و 6 بوصة</td><td>1 حصان حتى 75 حصان</td></tr>
+                        <tr><td><b>Ebara / Lowara</b></td><td>إيطالى</td><td>استانلس ستيل بالكامل</td><td>4 و 6 و 8 بوصة</td><td>2 حصان حتى 100 حصان</td></tr>
+                        <tr><td><b>Grundfos</b></td><td>دنماركى</td><td>أعلى جودة عالمية</td><td>4 و 6 و 8 بوصة</td><td>جميع القدرات</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- القسم السابع: الشاسيهات والهياكل -->
+        <div class="section-box" id="structures">
+            <h3><i class="fa-solid fa-warehouse"></i> القسم السابع: الشاسيهات وهياكل التثبيت (Structures)</h3>
+            <p><b>أنواع الشاسيهات:</b> ثابت، متحرك يدوي، متحرك أوتوماتيك Single Axis، ومتحرك Dual Axis.</p>
+            <p><b>المواصفات:</b> حديد مجلفن بالغمس الساخن عالي الجودة، ألومنيوم معالجة ضد الصدأ، سمك عالي يتحمل أقصى سرعات الرياح، مع مسامير استنلس ستيل بالكامل وعمر افتراضي طويل.</p>
+        </div>
+
+        <!-- القسم الثامن: المواسير -->
+        <div class="section-box" id="pipes">
+            <h3><i class="fa-solid fa-pipe"></i> القسم الثامن: المواسير (Pipes)</h3>
+            <p><b>الأنواع:</b> بلاستيك هندي، UPVC، PVC، HDPE، حديد أسود، وحديد مجلفن.</p>
+            <p><b>المقاسات والأطوال:</b> أطوال 6 متر و 12 متر، وبقطار (بوصات): 2 بوصة، 3 بوصة، 4 بوصة، 5 بوصة، 6 بوصة، وحتى 8 بوصة.</p>
+        </div>
+
+        <!-- القسم التاسع: الكابلات -->
+        <div class="section-box" id="cables">
+            <h3><i class="fa-solid fa-plug"></i> القسم التاسع: الكابلات (Cables)</h3>
+            <p><b>الأنواع:</b> كابلات DC و AC (نحاس وألومنيوم - صيني، هندي، تركي عالي الجودة).</p>
+            <p><b>المقاسات المتوفرة:</b> 4 مم²، 6 مم²، 10 مم²، 16 مم²، 25 مم²، 35 مم²، 50 مم²، 70 مم²، 95 مم²، 120 مم²، و 150 مم².</p>
+        </div>
+
+        <!-- قسم تواصل معنا -->
         <div class="section-box contact-card-box" id="contact-section">
             <h3><i class="fa-solid fa-headset"></i> تواصل معنا الآن</h3>
             <div class="contact-info-list">
@@ -792,70 +667,8 @@
             </div>
         </div>
 
-        <!-- خدماتنا -->
-        <div class="section-box" id="services">
-            <h3><i class="fa-solid fa-screwdriver-wrench"></i> خدماتنا المتكاملة (Our Services)</h3>
-            <div class="services-grid">
-                <div class="service-item"><i class="fa-solid fa-check"></i> تصميم محطات الطاقة الشمسية</div>
-                <div class="service-item"><i class="fa-solid fa-check"></i> توريد جميع مستلزمات الطاقة</div>
-                <div class="service-item"><i class="fa-solid fa-check"></i> تركيب وتشغيل جميع الأنظمة</div>
-                <div class="service-item"><i class="fa-solid fa-check"></i> صيانة محطات الطاقة الشمسية</div>
-                <div class="service-item"><i class="fa-solid fa-check"></i> صيانة جميع أنواع الإنفرترات</div>
-                <div class="service-item"><i class="fa-solid fa-check"></i> صيانة الغواطس والطلمبات</div>
-                <div class="service-item"><i class="fa-solid fa-check"></i> بيع وشراء الأنظمة الجديدة والمستعملة</div>
-                <div class="service-item"><i class="fa-solid fa-check"></i> تنفيذ محطات ري الآبار ومنظومات الإنارة</div>
-                <div class="service-item"><i class="fa-solid fa-check"></i> حساب الأحمال الكهربائية ودعم فني مستمر</div>
-            </div>
-        </div>
-
-        <!-- لماذا نحن -->
-        <div class="section-box" id="whyus">
-            <h3><i class="fa-solid fa-star"></i> لماذا نحن؟ (Why Choose Us)</h3>
-            <div class="why-us-grid">
-                <div class="why-item"><i class="fa-solid fa-circle-check"></i> خبرة كبيرة في مجال الطاقة الشمسية</div>
-                <div class="why-item"><i class="fa-solid fa-circle-check"></i> تنفيذ مئات المشروعات الناجحة</div>
-                <div class="why-item"><i class="fa-solid fa-circle-check"></i> أسعار تنافسية وممتازة</div>
-                <div class="why-item"><i class="fa-solid fa-circle-check"></i> نتعامل مع أفضل الماركات العالمية</div>
-                <div class="why-item"><i class="fa-solid fa-circle-check"></i> بيع وشراء الجديد والمستعمل</div>
-                <div class="why-item"><i class="fa-solid fa-circle-check"></i> ضمان على المنتجات والتركيب</div>
-                <div class="why-item"><i class="fa-solid fa-circle-check"></i> سرعة التنفيذ والالتزام بالمواعيد</div>
-                <div class="why-item"><i class="fa-solid fa-circle-check"></i> فريق عمل هندسي متخصص في كافة المحافظات</div>
-            </div>
-        </div>
-
-        <!-- الماركات العالمية -->
-        <div class="section-box" id="brands">
-            <h3><i class="fa-solid fa-globe"></i> الماركات العالمية المعتمدة</h3>
-            <div class="brands-category" style="margin-top: 15px;">
-                <h4>الألواح الشمسية</h4>
-                <div class="brands-grid">
-                    <div class="brand-badge">Jinko Solar</div>
-                    <div class="brand-badge">Trina Solar</div>
-                    <div class="brand-badge">JA Solar</div>
-                    <div class="brand-badge">LONGi Solar</div>
-                    <div class="brand-badge">Canadian Solar</div>
-                    <div class="brand-badge">TW Solar</div>
-                    <div class="brand-badge">AIKO</div>
-                </div>
-            </div>
-            <div class="brands-category">
-                <h4>الإنفرترات</h4>
-                <div class="brands-grid">
-                    <div class="brand-badge">Growatt</div>
-                    <div class="brand-badge">Deye</div>
-                    <div class="brand-badge">Solis</div>
-                    <div class="brand-badge">Huawei</div>
-                    <div class="brand-badge">Sungrow</div>
-                    <div class="brand-badge">GoodWe</div>
-                    <div class="brand-badge">FRECON</div>
-                    <div class="brand-badge">INVT</div>
-                </div>
-            </div>
-        </div>
-
     </div>
 
-    <!-- الفوتر -->
     <footer class="footer-bottom" id="contact">
         <div class="footer-col">
             <h5><i class="fa-solid fa-location-dot"></i> المقر الرئيسي</h5>
@@ -878,7 +691,6 @@
         </div>
     </footer>
 
-    <!-- الأزرار العائمة -->
     <div class="floating-buttons">
         <a href="https://wa.me/201029394526" class="float-btn whatsapp-float" target="_blank" title="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="tel:01029394526" class="float-btn call-float" title="اتصال"><i class="fa-solid fa-phone"></i></a>
@@ -897,3 +709,4 @@
 
 </body>
 </html>
+

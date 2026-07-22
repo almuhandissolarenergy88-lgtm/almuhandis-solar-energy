@@ -268,6 +268,50 @@
             gap: 8px;
         }
 
+        /* بطاقة تواصل معنا المميزة */
+        .contact-card-box {
+            background: linear-gradient(135deg, #043825, #021b12);
+            color: var(--white);
+            border-radius: 12px;
+            padding: 25px;
+            border: 2px solid var(--accent-gold);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        .contact-card-box h3 {
+            color: var(--accent-yellow);
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .contact-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            color: #f8fafc;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(243, 156, 18, 0.3);
+        }
+        .contact-item i {
+            color: var(--accent-gold);
+            font-size: 18px;
+            min-width: 25px;
+            text-align: center;
+        }
+        .contact-item a {
+            color: var(--accent-yellow);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-item a:hover { text-decoration: underline; }
+
         /* بطاقة العرض المميز (محطة 50 كيلو) */
         .offer-card {
             background: linear-gradient(135deg, #043825, #021b12);
@@ -384,8 +428,7 @@
             <li><a href="#pump-inverters">إنفرترات الطلمبات</a></li>
             <li><a href="#used-system">العروض المستعملة</a></li>
             <li><a href="#appliances">الأجهزة</a></li>
-            <li><a href="#accessories">المواسير والكابلات</a></li>
-            <li><a href="#contact">تواصل معنا</a></li>
+            <li><a href="#contact-section">تواصل معنا</a></li>
         </ul>
         <a href="https://wa.me/201029394526" class="nav-phone"><i class="fa-brands fa-whatsapp"></i> 01029394526</a>
     </nav>
@@ -720,6 +763,33 @@
             <p><b>المواسير المتاحة:</b> بلاستيك هندى وعادى (2 إلى 6 بوصة) - حديد عادى ومجلفن (2 إلى 8 بوصة) - UPVC - HDPE.</p>
             <p><b>الكابلات المتاحة:</b> كابلات DC و AC (نحاس وألومنيوم) بمقاسات تبدأ من 4 مم² وحتى 150 مم² (4 - 6 - 10 - 16 - 25 - 35 - 50 - 70 - 95 - 120 - 150 مم²).</p>
             <p><b>الشاسيهات:</b> ثابتة - متحركة يدويًا - متحركة أوتوماتيك (Single Axis & Dual Axis) مجلفنة بالغمس الساخن مع مسامير استنلس مقاومة للرياح.</p>
+        </div>
+
+        <!-- قسم تواصل معنا المخصص -->
+        <div class="section-box contact-card-box" id="contact-section">
+            <h3><i class="fa-solid fa-headset"></i> تواصل معنا الآن</h3>
+            <div class="contact-info-list">
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span><b>المقر الرئيسي:</b> محافظة الجيزة – شارع الثلاثيني – متفرع من شارع ترعة الزمر.</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span><b>واتساب:</b> <a href="https://wa.me/201029394526" target="_blank">01029394526</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span><b>البريد الإلكتروني:</b> <a href="mailto:almuhandissolarenergy88@gmail.com">almuhandissolarenergy88@gmail.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span><b>فيسبوك (صفحة):</b> <a href="#" target="_blank">Ahmad SOLAR ENERGY</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-users"></i>
+                    <span><b>فيسبوك (جروب):</b> <a href="#" target="_blank">SOLAR ENERGY</a></span>
+                </div>
+            </div>
         </div>
 
         <!-- خدماتنا -->

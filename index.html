@@ -218,7 +218,7 @@
             flex-wrap: wrap;
         }
 
-        /* شبكة الأيقونات التفاعلية الرئيسية */
+        /* شبكة الأيقونات التفاعلية */
         .main-icons-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -315,6 +315,38 @@
             line-height: 1.8;
             margin-bottom: 10px;
         }
+
+        /* تنسيق الجداول الفنية الاحترافية */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+            font-size: 13px;
+            background: var(--white);
+            white-space: nowrap;
+        }
+        .data-table th {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 12px 15px;
+            font-weight: 700;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+        .data-table td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #1e293b;
+        }
+        .data-table tr:nth-child(even) { background-color: #f8fafc; }
+        .data-table tr:hover { background-color: #f1f5f9; }
 
         .contact-card-box {
             background: linear-gradient(135deg, #043825, #021b12);
@@ -439,7 +471,7 @@
             <li><a href="#vision"><i class="fa-solid fa-eye"></i> رؤيتنا</a></li>
             <li><a href="#warranty"><i class="fa-solid fa-shield-halved"></i> سياسة الضمان</a></li>
             <li><a href="#services"><i class="fa-solid fa-screwdriver-wrench"></i> خدماتنا</a></li>
-            <li><a href="#catalog"><i class="fa-solid fa-box-open"></i> الكتالوج</a></li>
+            <li><a href="#catalog"><i class="fa-solid fa-box-open"></i> الكتالوج التفصيلي</a></li>
             <li><a href="#gallery"><i class="fa-solid fa-images"></i> معرض الصور</a></li>
             <li><a href="#contact-section"><i class="fa-solid fa-headset"></i> تواصل معنا</a></li>
         </ul>
@@ -469,7 +501,7 @@
 
     <div class="container">
 
-        <!-- شبكة الأيقونات التفاعلية -->
+        <!-- شبكة الأيقونات الرئيسية -->
         <div class="section-box">
             <h3><i class="fa-solid fa-th"></i> أقسام الشركة الرئيسية (اختر قسماً للتصفح السريع)</h3>
             <div class="main-icons-grid">
@@ -491,7 +523,7 @@
                 </a>
                 <a href="#catalog" class="icon-card">
                     <i class="fa-solid fa-box-open"></i>
-                    <span>كتالوج المنتجات</span>
+                    <span>الكتالوج التفصيلي</span>
                 </a>
                 <a href="#gallery" class="icon-card">
                     <i class="fa-solid fa-images"></i>
@@ -521,7 +553,6 @@
         <!-- قسم سياسة الضمان -->
         <div class="section-box" id="warranty">
             <h3><i class="fa-solid fa-shield-halved"></i> سياسة الضمان (أمان وثقة ممتدة)</h3>
-            <p>لأننا نثق في جودة ما نقدمه وفي كفاءة مهندسينا وفنيينا، نوفر أقوى برامج الضمان في السوق المصري:</p>
             <p><b>📜 ضمان يصل إلى 30 سنة:</b> على الأنظمة والمحطات الجديدة (حسب شروط المصنع وكفاءة الألواح الممتدة).</p>
             <p><b>🔧 ضمان شامل على التركيب:</b> نضمن لك سلامة وأمان التركيبات الهندسية والشاسيهات والتوصيلات ضد أي عيوب تنفيذية.</p>
             <p><b>♻️ ضمان حقيقي على الأنظمة المستعملة:</b> لتبدأ مشروعك براحة بال تامة، نوفر ضماناً خاصاً يفحص ويؤكد كفاءة وجودة القطع المستعملة قبل وبعد التشغيل.</p>
@@ -537,35 +568,130 @@
             <p><b>🚚 التغطية الجغرافية:</b> مستعدون لتنفيذ وإدارة المشروعات في جميع أنحاء جمهورية مصر العربية.</p>
         </div>
 
-        <!-- قسم كتالوج المنتجات -->
+        <!-- قسم الكتالوج التفصيلي المحدث بالقدرات والمقاسات -->
         <div class="section-box" id="catalog">
-            <h3><i class="fa-solid fa-box-open"></i> كتالوج منتجاتنا (جديد ومستعمل)</h3>
-            
-            <h4 style="color: var(--primary-green); margin-top: 15px; margin-bottom: 8px;"><i class="fa-solid fa-solar-panel"></i> الألواح الشمسية (Solar Panels)</h4>
-            <p>نتميز بتوفير كبرى الماركات العالمية بكافة القدرات (تكنولوجيا الوجه الواحد والوجهين - Mono & Bifacial):</p>
-            <p style="color: var(--accent-gold); font-weight: bold;">Jinko Solar | Trina Solar | JA Solar | LONGi Solar | Canadian Solar | TW Solar</p>
+            <h3><i class="fa-solid fa-box-open"></i> كتالوج المنتجات والمواصفات الفنية (جديد ومستعمل)</h3>
 
-            <h4 style="color: var(--primary-green); margin-top: 20px; margin-bottom: 8px;"><i class="fa-solid fa-bolt"></i> الإنفرترات (Inverters)</h4>
-            <p>أجهزة تحويل الطاقة وأنظمة التحكم الذكية من أفضل المصنعين عالمياً:</p>
-            <p style="color: var(--accent-gold); font-weight: bold;">Growatt | INVT | FRECON | Felicity | Deye | Solis</p>
+            <!-- 1. الألواح الشمسية -->
+            <h4 style="color: var(--primary-green); margin-top: 15px; margin-bottom: 5px;"><i class="fa-solid fa-solar-panel"></i> 1. الألواح الشمسية (Solar Panels)</h4>
+            <p>متوفر تكنولوجيا الوجه الواحد والوجهين (Mono & Bifacial) بأعلى كفاءة تشغيل:</p>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>الماركة العالمية</th>
+                            <th>القدرة (وات)</th>
+                            <th>النوع / التقنية</th>
+                            <th>الأبعاد التقريبية</th>
+                            <th>الوزن التقريبي</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Jinko Solar</td><td>580W - 630W</td><td>Mono Bifacial</td><td>2278 × 1134 مم</td><td>حوالي 30 كجم</td></tr>
+                        <tr><td>Trina Solar</td><td>590W - 650W</td><td>Vertex Mono</td><td>2384 × 1134 مم</td><td>حوالي 32 كجم</td></tr>
+                        <tr><td>JA Solar</td><td>570W - 620W</td><td>DeepBlue 4.0</td><td>2279 × 1134 مم</td><td>حوالي 28.5 كجم</td></tr>
+                        <tr><td>LONGi Solar</td><td>585W - 615W</td><td>Hi-MO 7 / 6</td><td>2278 × 1134 مم</td><td>حوالي 29 كجم</td></tr>
+                        <tr><td>Canadian Solar</td><td>600W - 630W</td><td>Hiku 7</td><td>2384 × 1096 مم</td><td>حوالي 31 كجم</td></tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <h4 style="color: var(--primary-green); margin-top: 20px; margin-bottom: 8px;"><i class="fa-solid fa-water"></i> الغواطس والمواتير (Solar Pumps)</h4>
-            <p>حلول ذكية لضخ المياه من الآبار للمزارع والمشروعات النائية:</p>
-            <p>• مواتير هندي (كفاءة واعتمادية عالية).</p>
-            <p>• مواتير تركي استانلس (مقاومة ممتازة للتآكل والظروف الصعبة).</p>
+            <!-- 2. الإنفرترات -->
+            <h4 style="color: var(--primary-green); margin-top: 25px; margin-bottom: 5px;"><i class="fa-solid fa-bolt"></i> 2. الإنفرترات (Inverters - ري وإضاءة)</h4>
+            <p>أنظمة تحويل ذكية (On-Grid / Off-Grid / Hybrid) مخصصة لمحطات الري الزراعي أو إضاءة المنازل والمنشآت:</p>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>الماركة</th>
+                            <th>القدرات المتوفرة</th>
+                            <th>الاستخدام المخصص</th>
+                            <th>نوع النظام</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Growatt</td><td>من 3 كيلو إلى 100 كيلو</td><td>زراعي (ري) + منزلي/تجاري</td><td>On/Off-Grid & Hybrid</td></tr>
+                        <tr><td>INVT</td><td>من 7.5 حصان إلى 100 حصان</td><td>انفرتر طرمبات آبار (ري زراعي)</td><td>Solar Pump Inverter</td></tr>
+                        <tr><td>FRECON</td><td>قدرات متعددة للآبار والمواتير</td><td>تشغيل غواطس وطرمبات ومصانع</td><td>Heavy Duty VFD</td></tr>
+                        <tr><td>Deye</td><td>من 5 كيلو إلى 50 كيلو</td><td>منزلي ومهجين (Hybrid) مع بطاريات</td><td>Hybrid Low/High Voltage</td></tr>
+                        <tr><td>Solis & Felicity</td><td>قدرات متنوعة تناسب كافة المشروعات</td><td>إضاءة وتحكم ذكي وطاقة منزلية</td><td>Grid-tied & Off-grid</td></tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <h4 style="color: var(--primary-green); margin-top: 20px; margin-bottom: 8px;"><i class="fa-solid fa-pipe"></i> المواسير وأنظمة التدفق</h4>
-            <p>• مواسير بلاستيك هندي: متوفرة بجميع المقاسات (طول القطعة 3 متر).</p>
-            <p>• مواسير حديد مجلفن: مقاومة للصدأ وعوامل الطقس، بجميع المقاسات (أطوال 3 متر و 6 متر).</p>
+            <!-- 3. الغواطس والطرمبات -->
+            <h4 style="color: var(--primary-green); margin-top: 25px; margin-bottom: 5px;"><i class="fa-solid fa-water"></i> 3. الغواطس والمواتير (Solar Pumps)</h4>
+            <p>حلول ذكية لضخ المياه من الآبار العميقة للمزارع والمشروعات النائية:</p>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>بلد المنشأ / الصناعة</th>
+                            <th>القدرات المتاحة</th>
+                            <th>عدد المراحل</th>
+                            <th>الاستخدام الرئيسي</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>مواتير هندي معتمدة</td><td>من 3 حصان إلى 50 حصان</td><td>متعددة المراحل (Multi-stage) حسب العمق</td><td>آبار ارتوازية عميقة وزراعة</td></tr>
+                        <tr><td>مواتير تركي استانلس</td><td>من 2 حصان إلى 40 حصان</td><td>هيكل مقاوم للتآكل والملوحة</td><td>مقاومة ظروف المياه الصعبة والري</td></tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <h4 style="color: var(--primary-green); margin-top: 20px; margin-bottom: 8px;"><i class="fa-solid fa-warehouse"></i> الشاسيهات وهياكل التثبيت</h4>
-            <p>• شاسيهات ثابتة ومتحركة (معدلة لتتبع الشمس).</p>
-            <p>• مصنعة من الحديد المجلفن عالي الجودة ومقاوم للصدأ.</p>
-            <p>• تصنيع خاص وحسب الطلب ليلائم طبيعة وتضاريس كل مشروع.</p>
+            <!-- 4. المواسير وأنظمة التدفق -->
+            <h4 style="color: var(--primary-green); margin-top: 25px; margin-bottom: 5px;"><i class="fa-solid fa-pipe"></i> 4. المواسير وأنظمة التدفق (مواسير الآبار)</h4>
+            <p>مواسير عالية التحمل لشبكات المياه والري:</p>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <th>نوع المواسير والصناعة</th>
+                        <th>الأطوال المتاحة</th>
+                        <th>البوصة (القطر)</th>
+                    </thead>
+                    <tbody>
+                        <tr><td>بلاستيك هندي عالي التحمل</td><td>3 متر للقطعة</td><td>2 بوصة، 3 بوصة، 4 بوصة، 5 بوصة، 6 بوصة</td></tr>
+                        <tr><td>حديد عادي / مجلفن مقاوم للصدأ</td><td>3 متر و 6 متر للأطوال</td><td>من 2 بوصة حتى 6 بوصة فأكثر</td></tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <h4 style="color: var(--primary-green); margin-top: 20px; margin-bottom: 8px;"><i class="fa-solid fa-plug"></i> الكابلات والتوصيلات</h4>
-            <p>• كابلات تركي معتمدة ومقاومة لدرجات الحرارة العالية.</p>
-            <p>• متوفرة بجميع الأقطار والمقاسات لكابلات التيار المستمر (DC) والتيار المتردد (AC).</p>
+            <!-- 5. الكابلات الكهربائية -->
+            <h4 style="color: var(--primary-green); margin-top: 25px; margin-bottom: 5px;"><i class="fa-solid fa-plug"></i> 5. الكابلات والتوصيلات الكهربائية</h4>
+            <p>كابلات مطابقة للمواصفات، معتمدة ومقاومة لدرجات الحرارة والشمس:</p>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>نوع الكابل</th>
+                            <th>المقاسات والقدرات (أمثلة شائعة)</th>
+                            <th>الاستخدام المخصص</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>كابلات تيار مستمر (DC Solar Cables)</td><td>1×4 مم، 1×6 مم، 1×10 مم</td>
+                        <td>توصيل الألواح الشمسية بالإنفرترات</td></tr>
+                        <tr><td>كابلات تيار متردد (AC Cables)</td><td>3×6 مم، 3×8 مم، 3×10 مم، وأعلى</td>
+                        <td>توصيل المولدات والإنفرترات بالشبكة واللوحات</td></tr>
+                        <tr><td>كابلات بحارى (Armored Cables)</td><td>متوفرة بمقاسات متعددة حسب الطلب</td>
+                        <td>التمديدات الأرضية والتحمل الشاق للمزارع</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 6. الشاسيهات وهياكل التثبيت -->
+            <h4 style="color: var(--primary-green); margin-top: 25px; margin-bottom: 5px;"><i class="fa-solid fa-warehouse"></i> 6. الشاسيهات وهياكل التثبيت</h4>
+            <p>مصنعة بعناية لتتحمل أقصى ظروف الرياح والأحمال:</p>
+            <p>• <b>الأنواع:</b> شاسيهات ثابتة أو شاسيهات متحركة (معدلة لتتبع حركة الشمس لزيادة الكفاءة).</p>
+            <p>• <b>خامات التصنيع:</b> حديد عادي أو حديد مجلفن مثنى على الساخن عالي الجودة ومقاوم تماماً للصدأ.</p>
+            <p>• <b>التفصيل:</b> إمكانية التصنيع الخاص وحسب الطلب لتلائم طبيعة وتضاريس كل مشروع زراعي أو صناعي.</p>
+
+            <!-- 7. البطاريات وصناديق الحماية -->
+            <h4 style="color: var(--primary-green); margin-top: 25px; margin-bottom: 5px;"><i class="fa-solid fa-car-battery"></i> 7. البطاريات وصناديق الحماية</h4>
+            <p>لتخزين الطاقات والاحتياطات الطارئة وحماية المحطة بالكامل:</p>
+            <p>• <b>أنواع البطاريات والقدرات:</b> بطاريات جل (Gel) وليثيوم (Lithium) بقدرات تخزينية متنوعة تناسب الأنظمة المنزلية والخدمية.</p>
+            <p>• <b>الماركات العالمية:</b> كبرى الشركات العالمية والموثوقة في تخزين الطاقة.</p>
+            <p>• <b>صناديق الحماية (Protection Boxes):</b> لوحات تجميع ومفاتيح وقاية (DC/AC Surge Protectors & Circuit Breakers) لحماية المكونات من الصواعق وارتفاع الجهد.</p>
         </div>
 
         <!-- معرض الصور -->
